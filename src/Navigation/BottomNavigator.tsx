@@ -1,14 +1,14 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeIcon, HomeFocusedIcon, PortfolioIcon, PortfolioFocusedIcon, GiftIcon, GiftFocusedIcon, ChartIcon, ChartFocusedIcon, ProfileIcon, ProfileFocusedIcon } from '../Assets/Icons/SVG/index';
+import { HomeIcon, HomeFocusedIcon, PortfolioIcon, PortfolioFocusedIcon, GiftIcon, GiftFocusedIcon, ChartIcon, ChartFocusedIcon, ProfileIcon, ProfileFocusedIcon } from '../assets/icons/SVG/index';
 
 //Screens
-import HomeScreen from '../Screens/HomeScreen';
-import PortfolioScreen from '../Screens/PortfolioScreen';
-import RewardScreen from '../Screens/RewardScreen';
-import MarketScreen from '../Screens/MarketScreen';
-import ProfileScreen from '../Screens/ProfileScreen';
+import HomeScreen from '../screens/HomeScreen';
+import PortfolioScreen from '../screens/PortfolioScreen';
+import RewardScreen from '../screens/RewardScreen';
+import MarketScreen from '../screens/MarketScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const BottomTab = createBottomTabNavigator();
 

@@ -1,11 +1,9 @@
 import React from 'react';
-import RootNavigator from './src/Navigation/RootNavigator';
+import Navigation from './src/navigation';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <>
-      <RootNavigator />
-    </>
+    <Navigation />
   )
 }
 

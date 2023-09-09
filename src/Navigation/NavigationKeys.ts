@@ -1,0 +1,7 @@
+const STACK_NAVIGATION_KEYS = {
+
+}
+
+const BOTTOM_NAVIGATION_KEYS = {
+    
+}

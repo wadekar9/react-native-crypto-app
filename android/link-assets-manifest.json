@@ -2,68 +2,36 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/Assets/Fonts/CircularStd-Black.ttf",
+      "path": "src/assets/fonts/CircularStd-Black.ttf",
       "sha1": "b28281624afe633b6f5c368e93cdee2a2d6fdd74"
     },
     {
-      "path": "src/Assets/Fonts/CircularStd-BlackItalic.ttf",
-      "sha1": "f6f05268a8a1d5a3ae0352e02abd8cc14962fdda"
-    },
-    {
-      "path": "src/Assets/Fonts/CircularStd-Bold.ttf",
+      "path": "src/assets/fonts/CircularStd-Bold.ttf",
       "sha1": "879abb2579e83ab43c09aad8fa78f2d614ace077"
     },
     {
-      "path": "src/Assets/Fonts/CircularStd-BoldItalic.ttf",
-      "sha1": "54c57cf3d367645b6094154718beb59f448d1220"
-    },
-    {
-      "path": "src/Assets/Fonts/CircularStd-Book.ttf",
+      "path": "src/assets/fonts/CircularStd-Book.ttf",
       "sha1": "e41d5d04155f6233cdec9176a8a7eb3e0cd2b70a"
     },
     {
-      "path": "src/Assets/Fonts/CircularStd-BookItalic.ttf",
-      "sha1": "7052714ec71a5450b6a9a4f77f77d8bdbeb43f3d"
-    },
-    {
-      "path": "src/Assets/Fonts/CircularStd-Medium.ttf",
+      "path": "src/assets/fonts/CircularStd-Medium.ttf",
       "sha1": "262e6e5742420716834bb6584a03e8310690e041"
     },
     {
-      "path": "src/Assets/Fonts/CircularStd-MediumItalic.ttf",
-      "sha1": "144f9d100e2d7b85df57f36463cfc05915a8de9b"
-    },
-    {
-      "path": "src/Assets/Fonts/GothamBold.ttf",
+      "path": "src/assets/fonts/GothamBold.ttf",
       "sha1": "ac5ba291bf8464df67a38f6054d25be7c2e0307f"
     },
     {
-      "path": "src/Assets/Fonts/GothamBoldItalic.ttf",
-      "sha1": "da6475cdce15b579ec90a27b5cafead0687c3f5a"
-    },
-    {
-      "path": "src/Assets/Fonts/GothamBook.ttf",
+      "path": "src/assets/fonts/GothamBook.ttf",
       "sha1": "ed5bc8195822fc962503b042d0f5a1f406782f24"
     },
     {
-      "path": "src/Assets/Fonts/GothamBookItalic.ttf",
-      "sha1": "b156aeb90bd308fd0a717d9633d5a82e3af7c76b"
-    },
-    {
-      "path": "src/Assets/Fonts/GothamLight.ttf",
+      "path": "src/assets/fonts/GothamLight.ttf",
       "sha1": "c44d6c4bde608e1d76b27a1587da83225af4ca4f"
     },
     {
-      "path": "src/Assets/Fonts/GothamLightItalic.ttf",
-      "sha1": "d605afce503bf950089829954651052dbb377c91"
-    },
-    {
-      "path": "src/Assets/Fonts/GothamMedium.ttf",
+      "path": "src/assets/fonts/GothamMedium.ttf",
       "sha1": "74c87f67010f63777e33c5114c76b1fc67e4ae5b"
-    },
-    {
-      "path": "src/Assets/Fonts/GothamMediumItalic.ttf",
-      "sha1": "c77627e4242f0edc56145897b900854a2960b3e1"
     }
   ]
 }
