@@ -1,14 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React, { useEffect } from 'react'
-import { useNavigation } from '@react-navigation/native';
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { RootStackScreenProps } from '@utils/navigation';
 
-const SplashScreen = () => {
-
-    const navigation = useNavigation();
-
-    useEffect(() => {
-        setTimeout(() => navigation.navigate('BottomNavigator'),1800);
-    },[]);
+const SplashScreen : React.FC<RootStackScreenProps<'SplashScreen'>> = ({ navigation, route }) => {
 
   return (
     <View>
@@ -17,6 +11,6 @@ const SplashScreen = () => {
   )
 }
 
-export default SplashScreen
+export default SplashScreen;
 
 const styles = StyleSheet.create({})

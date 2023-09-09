@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { BottomTabsScreenProps } from '@utils/navigation'
 
-const ProfileScreen = () => {
+const ProfileScreen : React.FC<BottomTabsScreenProps<'ProfileScreen'>> = () => {
   return (
     <View>
       <Text>ProfileScreen</Text>

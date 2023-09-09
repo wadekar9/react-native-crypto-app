@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { BottomTabsScreenProps } from '@utils/navigation'
 
-const RewardScreen = () => {
+const RewardScreen : React.FC<BottomTabsScreenProps<'RewardScreen'>> = () => {
   return (
     <View>
       <Text>RewardScreen</Text>

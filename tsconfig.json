@@ -10,7 +10,10 @@
       "@services/*": ["src/services/*"],
       "@assets/*": ["src/assets/*"],
       "@mock/*": ["src/mock/*"],
-      "@redux/*": ["src/redux/*"]
-    }
+      "@redux/*": ["src/redux/*"],
+      "@config/*": ["src/config/*"],
+      "@types": ["src/types/index.d.ts"]
+    },
+    "typeRoots": ["src/types/index.d.ts"]
   }
 }

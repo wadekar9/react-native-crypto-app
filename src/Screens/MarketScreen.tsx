@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { BottomTabsScreenProps } from '@utils/navigation'
 
-const MarketScreen = () => {
+const MarketScreen : React.FC<BottomTabsScreenProps<'MarketScreen'>> = () => {
   return (
     <View>
       <Text>MarketScreen</Text>

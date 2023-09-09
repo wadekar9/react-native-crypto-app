@@ -11,7 +11,9 @@ module.exports = {
           '@hooks': './src/hooks',
           '@services': './src/services',
           '@mock': './src/mock',
-          '@redux': './src/redux'
+          '@redux': './src/redux',
+          '@config': './src/config',
+          '@types': './src/types/index.d.ts',
         }
       }
     ]
