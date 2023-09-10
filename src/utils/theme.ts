@@ -30,8 +30,13 @@ export const Colors = {
     RED : '#D90429',
     GREEN : '#21BF73',
     GREY : '#6C757D',
+    ORANGE : '#F59300',
+    VIOLET : '#9300F5',
+    PINK : '#F50062',
     DARK_GREY : '#343A40',
-    LIGHT_SKY : '#ECF4FF'
+    LIGHT_SKY : '#ECF4FF',
+    BACKGROUND_COLOR : '#F8F9FA',
+    TRANSPARENT : '#00000000'
 }
 
 export const DEVICE_STYLES = {

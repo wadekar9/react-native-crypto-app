@@ -8,6 +8,21 @@ import HomeFocusedIcon from './HomeFocusedIcon.svg';
 import HomeUnfocusedIcon from './HomeUnfocusedIcon.svg';
 import ProfileFocusedIcon from './ProfileFocusedIcon.svg';
 import ProfileUnfocusedIcon from './ProfileUnfocusedIcon.svg';
+import CouponsBannerIcon from './CouponsBannerIcon.svg';
+import GetStartedBannerIcon from './GetStartedBannerIcon.svg';
+import InvestmentBannerIcon from './InvestmentBannerIcon.svg';
+import ReferBannerIcon from './ReferBannerIcon.svg';
+import SpeenWheelBannerIcon from './SpeenWheelBannerIcon.svg';
+
+import BankIcon from './BankIcon.svg';
+import HistoryIcon from './HistoryIcon.svg';
+import LogOutIcon from './LogOutIcon.svg';
+import NotificationIcon from './NotificationIcon.svg';
+import SecurityIcon from './SecurityIcon.svg';
+import SupportIcon from './SupportIcon.svg';
+import RightChevron from './RightChevron.svg';
+import LogoIcon from './LogoIcon.svg';
+import DocumentIcon from './DocumentIcon.svg';
 
 export {
     PortfolioFocusedIcon,
@@ -19,5 +34,19 @@ export {
     HomeFocusedIcon,
     HomeUnfocusedIcon,
     ProfileFocusedIcon,
-    ProfileUnfocusedIcon
+    ProfileUnfocusedIcon,
+    LogoIcon,
+    CouponsBannerIcon,
+    GetStartedBannerIcon,
+    InvestmentBannerIcon,
+    ReferBannerIcon,
+    SpeenWheelBannerIcon,
+    BankIcon,
+    HistoryIcon,
+    LogOutIcon,
+    NotificationIcon,
+    SecurityIcon,
+    SupportIcon,
+    RightChevron,
+    DocumentIcon
 }
