@@ -11,6 +11,14 @@ import { createNavigationContainerRef } from '@react-navigation/native';
 export type RootStackParamList = {
     SplashScreen: undefined;
     BottomNavigator: undefined;
+    BuySellScreen: undefined,
+    CoinScreen: undefined,
+    DepositWithdrawalScreen: { requestType : string },
+    ReceiveExchangeScreen: undefined,
+    SendExchangeScreen: undefined,
+    SpinWheelScreen: undefined,
+    ReferEarnScreen: undefined,
+    HistoryScreen: undefined,
 };
 
 export type BottomTabsParamList = {

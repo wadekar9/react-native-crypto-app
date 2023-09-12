@@ -36,6 +36,7 @@ export const Colors = {
     DARK_GREY : '#343A40',
     LIGHT_SKY : '#ECF4FF',
     BACKGROUND_COLOR : '#F8F9FA',
+    BORDER_COLOR : '#DFE2E4',
     TRANSPARENT : '#00000000'
 }
 

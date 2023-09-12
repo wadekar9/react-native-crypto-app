@@ -20,6 +20,7 @@ const PortfolioScreen: React.FC<BottomTabsScreenProps<'PortfolioScreen'>> = ({
             activeOpacity={0.7}
             accessibilityRole={'button'}
             accessible={true}
+            onPress={() => navigation.navigate('DepositWithdrawalScreen', { requestType : 'Deposit' })}
             style={[styles.buttonContainer,{ backgroundColor : Colors.PRIMARY_COLOR }]}
           >
             <Text style={[styles.buttonContainerText, { color : Colors.WHITE }]}>Deposit INR</Text>
@@ -28,6 +29,7 @@ const PortfolioScreen: React.FC<BottomTabsScreenProps<'PortfolioScreen'>> = ({
             activeOpacity={0.7}
             accessibilityRole={'button'}
             accessible={true}
+            onPress={() => navigation.navigate('DepositWithdrawalScreen', { requestType : 'Withdraw' })}
             style={[styles.buttonContainer,{ backgroundColor : Colors.TRANSPARENT }]}
           >
             <Text style={[styles.buttonContainerText, { color : Colors.PRIMARY_COLOR }]}>Withdraw INR</Text>

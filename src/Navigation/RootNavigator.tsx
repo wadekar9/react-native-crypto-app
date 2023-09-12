@@ -20,6 +20,14 @@ const RootNavigator : React.FC = () => {
       }}>
       <Stack.Screen name={"SplashScreen"} component={StackNavigationRoutes.SplashScreen} />
       <Stack.Screen name={"BottomNavigator"} component={StackNavigationRoutes.BottomNavigator} />
+      <Stack.Screen name={"BuySellScreen"} component={StackNavigationRoutes.BuySellScreen} />
+      <Stack.Screen name={"CoinScreen"} component={StackNavigationRoutes.CoinScreen} />
+      <Stack.Screen name={"DepositWithdrawalScreen"} component={StackNavigationRoutes.DepositWithdrawalScreen} />
+      <Stack.Screen name={"ReceiveExchangeScreen"} component={StackNavigationRoutes.ReceiveExchangeScreen} />
+      <Stack.Screen name={"SendExchangeScreen"} component={StackNavigationRoutes.SendExchangeScreen} />
+      <Stack.Screen name={"SpinWheelScreen"} component={StackNavigationRoutes.SpinWheelScreen} />
+      <Stack.Screen name={"ReferEarnScreen"} component={StackNavigationRoutes.ReferEarnScreen} />
+      <Stack.Screen name={"HistoryScreen"} component={StackNavigationRoutes.HistoryScreen} />
     </Stack.Navigator>
   );
 };

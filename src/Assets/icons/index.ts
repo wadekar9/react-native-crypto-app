@@ -21,8 +21,13 @@ import NotificationIcon from './NotificationIcon.svg';
 import SecurityIcon from './SecurityIcon.svg';
 import SupportIcon from './SupportIcon.svg';
 import RightChevron from './RightChevron.svg';
+import LeftChevron from './LeftChevron.svg';
 import LogoIcon from './LogoIcon.svg';
 import DocumentIcon from './DocumentIcon.svg';
+import SearchIcon from './SearchIcon.svg';
+import DropIcon from './DropIcon.svg';
+import NoData from './NoData.svg';
+import BackSpaceIcon from './BackSpaceIcon.svg';
 
 export {
     PortfolioFocusedIcon,
@@ -48,5 +53,10 @@ export {
     SecurityIcon,
     SupportIcon,
     RightChevron,
-    DocumentIcon
+    DocumentIcon,
+    LeftChevron,
+    SearchIcon,
+    DropIcon,
+    NoData,
+    BackSpaceIcon
 }
