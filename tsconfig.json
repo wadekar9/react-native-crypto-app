@@ -1,19 +1,70 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
-  "compilerOptions" : {
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "allowJs": false,
+    "jsx": "react-native",
+    "noImplicitAny": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "ESNext",
+    "lib": [
+      "ES7"
+    ],
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@services/*": ["src/services/*"],
-      "@assets/*": ["src/assets/*"],
-      "@mock/*": ["src/mock/*"],
-      "@redux/*": ["src/redux/*"],
-      "@config/*": ["src/config/*"],
-      "@types": ["src/types/index.d.ts"]
-    },
-    "typeRoots": ["src/types/index.d.ts"]
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@dev/*": [
+        "src/dev/*"
+      ],
+      "@dto/*": [
+        "src/dto/*"
+      ],
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@locales/*": [
+        "src/locales/*"
+      ],
+      "@mock/*": [
+        "src/mock/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@screens/*": [
+        "src/screens/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@validators/*": [
+        "src/validators/*"
+      ]
+    }
   }
 }

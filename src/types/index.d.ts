@@ -2,7 +2,6 @@ import { MessageOptions } from 'react-native-flash-message';
 import { createBottomTabNavigator, BottomTabBarButtonProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
-import { RBSheetProps } from 'react-native-raw-bottom-sheet';
 
 export interface ToastMessage extends MessageOptions {
     isPositive?: boolean
@@ -27,8 +26,8 @@ export interface MarketListItemProps {
 }
 
 export interface CustomKeyboardKeysItemProps {
-    label : string;
-    isIcon : boolean;
+    label: string;
+    isIcon: boolean;
     externalStyle: StyleProp<ViewStyle>;
 }
 
@@ -41,6 +40,6 @@ export interface BaseButtonProps {
 
 export interface MarketSelectorProps {
     status?: boolean;
-    changeStatus: (e : boolean) => void;
+    changeStatus: (e: boolean) => void;
     sheetHeight?: number;
 }

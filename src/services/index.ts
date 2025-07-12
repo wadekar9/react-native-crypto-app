@@ -1,7 +1,5 @@
 import { showMessage } from 'react-native-flash-message';
-import { getUniqueId } from 'react-native-device-info';
 import NetInfo from '@react-native-community/netinfo';
-import moment from 'moment';
 import { Messages } from '@utils/messages';
 import { EMAIL_REGEX } from '@utils/constant';
 import { Colors, Fonts, moderateScale } from '@utils/theme';
@@ -49,18 +47,13 @@ export const displayRating = (rat: number, from: number = 5) => `(${rat}/${from}
     @param {number} - Date.now() date
     @returns {string} - date string with "dddd, LT" format
 */
-export const displayDate = (date: number = Date.now()): string => moment(new Date(date)).format('dddd, LT').toString();
+export const displayDate = (date: number = Date.now()): string => (new Date(date)).toLocaleString();
 
 /** 
     @param {number} - Date.now() date
     @returns {string} - date string with "DD MMMM YYYY, hh:mm A" format
 */
-export const displatFullDate = (date: number = Date.now()): string => moment(new Date(date)).format('DD MMMM YYYY, hh:mm A').toString();
-
-/** 
-    @returns {string} - device unique id
-*/
-export const getDeviceUniqueId = async () => await getUniqueId();
+export const displatFullDate = (date: number = Date.now()): string => (new Date(date)).toLocaleString();
 
 /** 
 *    @returns {boolean} - internet connection

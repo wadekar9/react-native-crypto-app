@@ -1,9 +1,15 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import Navigation from './src/navigation';
+import { navigationRef } from '@utils/navigation';
+import RootNavigator from '@navigation/RootNavigator';
 
 const App: React.FC = () => {
   return (
-    <Navigation />
+    <NavigationContainer
+      ref={navigationRef}
+    >
+      <RootNavigator />
+    </NavigationContainer>
   )
 }
 

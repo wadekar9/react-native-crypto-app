@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* cryptoappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cryptoappTests.m */; };
+		01DFAE0CA90BC2442FAEA96F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 37B61E60CAD7E25A3B7FBA57 /* PrivacyInfo.xcprivacy */; };
+		04997B53EDE84D329A15D094 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1144EBB5EC8E4754A7E01E20 /* CircularStd-Book.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-cryptoapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-cryptoapp.a */; };
+		130D0A759927445899B07B9B /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C45A5913B044444ABA6CB11 /* CircularStd-Black.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14DD4CD6CE9F4852A5AEA44D /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2240C5D4869646049F024814 /* GothamMedium.ttf */; };
+		34471F0E44BD40559901FC7F /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5560C8E7E0A4EDBA4EA07CE /* GothamBook.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-cryptoapp-cryptoappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-cryptoapp-cryptoappTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F744CD1E99B04032B0603DD0 /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2678D6631F4780B94A5ADB /* GothamBold.ttf */; };
-		BE5641EAD069453397C8FE24 /* GothamLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 634E21A505244D1FB3A5B8DB /* GothamLight.ttf */; };
-		14DD4CD6CE9F4852A5AEA44D /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2240C5D4869646049F024814 /* GothamMedium.ttf */; };
-		130D0A759927445899B07B9B /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C45A5913B044444ABA6CB11 /* CircularStd-Black.ttf */; };
-		A2B56FB93E0D4FD08C35A1C3 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19181FF72EF64EB689F1FD30 /* CircularStd-Bold.ttf */; };
-		04997B53EDE84D329A15D094 /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1144EBB5EC8E4754A7E01E20 /* CircularStd-Book.ttf */; };
 		96466E806A4D42489CAD9039 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2656A633A364720AAF927D5 /* CircularStd-Medium.ttf */; };
-		34471F0E44BD40559901FC7F /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5560C8E7E0A4EDBA4EA07CE /* GothamBook.ttf */; };
+		A2B56FB93E0D4FD08C35A1C3 /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19181FF72EF64EB689F1FD30 /* CircularStd-Bold.ttf */; };
+		BE5641EAD069453397C8FE24 /* GothamLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 634E21A505244D1FB3A5B8DB /* GothamLight.ttf */; };
+		F744CD1E99B04032B0603DD0 /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2678D6631F4780B94A5ADB /* GothamBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,28 +39,29 @@
 		00E356EE1AD99517003FC87E /* cryptoappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* cryptoappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cryptoappTests.m; sourceTree = "<group>"; };
+		1144EBB5EC8E4754A7E01E20 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Book.ttf"; path = "../src/assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* cryptoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = cryptoapp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = cryptoapp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cryptoapp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cryptoapp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cryptoapp/main.m; sourceTree = "<group>"; };
+		19181FF72EF64EB689F1FD30 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Bold.ttf"; path = "../src/assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-cryptoapp-cryptoappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoapp-cryptoappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2240C5D4869646049F024814 /* GothamMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GothamMedium.ttf; path = ../src/assets/fonts/GothamMedium.ttf; sourceTree = "<group>"; };
+		37B61E60CAD7E25A3B7FBA57 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = cryptoapp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-cryptoapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoapp.debug.xcconfig"; path = "Target Support Files/Pods-cryptoapp/Pods-cryptoapp.debug.xcconfig"; sourceTree = "<group>"; };
+		3C45A5913B044444ABA6CB11 /* CircularStd-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Black.ttf"; path = "../src/assets/fonts/CircularStd-Black.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-cryptoapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoapp.release.xcconfig"; path = "Target Support Files/Pods-cryptoapp/Pods-cryptoapp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-cryptoapp-cryptoappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoapp-cryptoappTests.debug.xcconfig"; path = "Target Support Files/Pods-cryptoapp-cryptoappTests/Pods-cryptoapp-cryptoappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-cryptoapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cryptoapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		634E21A505244D1FB3A5B8DB /* GothamLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GothamLight.ttf; path = ../src/assets/fonts/GothamLight.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cryptoapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-cryptoapp-cryptoappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoapp-cryptoappTests.release.xcconfig"; path = "Target Support Files/Pods-cryptoapp-cryptoappTests/Pods-cryptoapp-cryptoappTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B2678D6631F4780B94A5ADB /* GothamBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GothamBold.ttf; path = ../src/assets/fonts/GothamBold.ttf; sourceTree = "<group>"; };
+		A2656A633A364720AAF927D5 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CircularStd-Medium.ttf"; path = "../src/assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		8B2678D6631F4780B94A5ADB /* GothamBold.ttf */ = {isa = PBXFileReference; name = "GothamBold.ttf"; path = "../src/assets/fonts/GothamBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		634E21A505244D1FB3A5B8DB /* GothamLight.ttf */ = {isa = PBXFileReference; name = "GothamLight.ttf"; path = "../src/assets/fonts/GothamLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2240C5D4869646049F024814 /* GothamMedium.ttf */ = {isa = PBXFileReference; name = "GothamMedium.ttf"; path = "../src/assets/fonts/GothamMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3C45A5913B044444ABA6CB11 /* CircularStd-Black.ttf */ = {isa = PBXFileReference; name = "CircularStd-Black.ttf"; path = "../src/assets/fonts/CircularStd-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		19181FF72EF64EB689F1FD30 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; name = "CircularStd-Bold.ttf"; path = "../src/assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1144EBB5EC8E4754A7E01E20 /* CircularStd-Book.ttf */ = {isa = PBXFileReference; name = "CircularStd-Book.ttf"; path = "../src/assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A2656A633A364720AAF927D5 /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; name = "CircularStd-Medium.ttf"; path = "../src/assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F5560C8E7E0A4EDBA4EA07CE /* GothamBook.ttf */ = {isa = PBXFileReference; name = "GothamBook.ttf"; path = "../src/assets/fonts/GothamBook.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F5560C8E7E0A4EDBA4EA07CE /* GothamBook.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GothamBook.ttf; path = ../src/assets/fonts/GothamBook.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				37B61E60CAD7E25A3B7FBA57 /* PrivacyInfo.xcprivacy */,
 			);
 			name = cryptoapp;
 			sourceTree = "<group>";
@@ -120,6 +123,22 @@
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-cryptoapp-cryptoappTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		779A21F682BC4888B2346B95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B2678D6631F4780B94A5ADB /* GothamBold.ttf */,
+				634E21A505244D1FB3A5B8DB /* GothamLight.ttf */,
+				2240C5D4869646049F024814 /* GothamMedium.ttf */,
+				3C45A5913B044444ABA6CB11 /* CircularStd-Black.ttf */,
+				19181FF72EF64EB689F1FD30 /* CircularStd-Bold.ttf */,
+				1144EBB5EC8E4754A7E01E20 /* CircularStd-Book.ttf */,
+				A2656A633A364720AAF927D5 /* CircularStd-Medium.ttf */,
+				F5560C8E7E0A4EDBA4EA07CE /* GothamBook.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -164,22 +183,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		779A21F682BC4888B2346B95 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				8B2678D6631F4780B94A5ADB /* GothamBold.ttf */,
-				634E21A505244D1FB3A5B8DB /* GothamLight.ttf */,
-				2240C5D4869646049F024814 /* GothamMedium.ttf */,
-				3C45A5913B044444ABA6CB11 /* CircularStd-Black.ttf */,
-				19181FF72EF64EB689F1FD30 /* CircularStd-Bold.ttf */,
-				1144EBB5EC8E4754A7E01E20 /* CircularStd-Book.ttf */,
-				A2656A633A364720AAF927D5 /* CircularStd-Medium.ttf */,
-				F5560C8E7E0A4EDBA4EA07CE /* GothamBook.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,6 +288,7 @@
 				04997B53EDE84D329A15D094 /* CircularStd-Book.ttf in Resources */,
 				96466E806A4D42489CAD9039 /* CircularStd-Medium.ttf in Resources */,
 				34471F0E44BD40559901FC7F /* GothamBook.ttf in Resources */,
+				01DFAE0CA90BC2442FAEA96F /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,7 +581,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -639,8 +643,14 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -649,7 +659,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -703,8 +713,13 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
