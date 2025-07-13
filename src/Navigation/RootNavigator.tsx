@@ -1,8 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { RootStackParamList } from '@utils/navigation';
-import { StackNavigationRoutes } from './Routes';
-import { Colors } from '@utils/theme';
+import { RootStackParamList } from '$utils/navigation';
+import { StackRoutes } from './Routes';
+import { Colors } from '$utils/theme';
+import BottomNavigator from './BottomNavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -18,16 +19,16 @@ const RootNavigator: React.FC = () => {
         statusBarTranslucent: false,
         animation: 'slide_from_right'
       }}>
-      <Stack.Screen name={"SplashScreen"} component={StackNavigationRoutes.SplashScreen} />
-      <Stack.Screen name={"BottomNavigator"} component={StackNavigationRoutes.BottomNavigator} />
-      <Stack.Screen name={"BuySellScreen"} component={StackNavigationRoutes.BuySellScreen} />
-      <Stack.Screen name={"CoinScreen"} component={StackNavigationRoutes.CoinScreen} />
-      <Stack.Screen name={"DepositWithdrawalScreen"} component={StackNavigationRoutes.DepositWithdrawalScreen} />
-      <Stack.Screen name={"ReceiveExchangeScreen"} component={StackNavigationRoutes.ReceiveExchangeScreen} />
-      <Stack.Screen name={"SendExchangeScreen"} component={StackNavigationRoutes.SendExchangeScreen} />
-      <Stack.Screen name={"SpinWheelScreen"} component={StackNavigationRoutes.SpinWheelScreen} />
-      <Stack.Screen name={"ReferEarnScreen"} component={StackNavigationRoutes.ReferEarnScreen} />
-      <Stack.Screen name={"HistoryScreen"} component={StackNavigationRoutes.HistoryScreen} />
+      <Stack.Screen name={"SplashScreen"} component={StackRoutes.Splash} />
+      <Stack.Screen name={"BottomNavigator"} component={BottomNavigator} />
+      <Stack.Screen name={"BuySellScreen"} component={StackRoutes.BuySell} />
+      <Stack.Screen name={"CoinScreen"} component={StackRoutes.Coin} />
+      <Stack.Screen name={"DepositWithdrawalScreen"} component={StackRoutes.DepositWithdrawal} />
+      <Stack.Screen name={"ReceiveExchangeScreen"} component={StackRoutes.ReceiveExchange} />
+      <Stack.Screen name={"SendExchangeScreen"} component={StackRoutes.SendExchange} />
+      <Stack.Screen name={"SpinWheelScreen"} component={StackRoutes.SpinWheel} />
+      <Stack.Screen name={"ReferEarnScreen"} component={StackRoutes.ReferEarn} />
+      <Stack.Screen name={"HistoryScreen"} component={StackRoutes.History} />
     </Stack.Navigator>
   );
 };

@@ -1,6 +1,6 @@
-import { BankIcon, HistoryIcon, LogOutIcon, NotificationIcon, SecurityIcon, SupportIcon, DocumentIcon } from '@assets/icons';
-import { ProfileMenusProps, MarketListItemProps, CustomKeyboardKeysItemProps } from '@types';
-import { moderateScale } from '@utils/theme';
+import { BankIcon, HistoryIcon, LogOutIcon, NotificationIcon, SecurityIcon, SupportIcon, DocumentIcon } from '$assets/icons';
+import { ProfileMenusProps, MarketListItemProps, CustomKeyboardKeysItemProps } from '$types/common';
+import { moderateScale } from '$utils/theme';
 
 export const ProfileMenus: ProfileMenusProps[] = [
     {

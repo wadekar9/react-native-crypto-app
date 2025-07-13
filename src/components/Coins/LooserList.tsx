@@ -1,7 +1,7 @@
-import {View, FlatList, StyleSheet} from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import React, { memo } from 'react';
-import BaseCoinListItem from '@components/BaseCoinListItem';
-import {DEVICE_STYLES, moderateScale} from '@utils/theme';
+import BaseCoinListItem from '$components/BaseCoinListItem';
+import { DEVICE_STYLES, moderateScale } from '$utils/theme';
 
 
 const LooserList = () => {
@@ -20,13 +20,13 @@ const LooserList = () => {
         alwaysBounceVertical={false}
         maxToRenderPerBatch={10}
         ItemSeparatorComponent={() => (
-          <View style={{marginVertical: moderateScale(5)}} />
+          <View style={{ marginVertical: moderateScale(5) }} />
         )}
         contentContainerStyle={{
           flexGrow: 1,
           paddingVertical: moderateScale(8),
         }}
-        renderItem={({item, index}) => (
+        renderItem={({ item, index }) => (
           <BaseCoinListItem key={`${index}`} item={item} index={index} />
         )}
       />
@@ -37,8 +37,8 @@ const LooserList = () => {
 export default memo(LooserList);
 
 const styles = StyleSheet.create({
-  contaienr : {
-    height : '100%',
-    width : DEVICE_STYLES.SCREEN_WIDTH
+  contaienr: {
+    height: '100%',
+    width: DEVICE_STYLES.SCREEN_WIDTH
   }
 })

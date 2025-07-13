@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { memo, useRef, useEffect, useState } from 'react';
-import { moderateScale, Fonts, Colors, DEVICE_STYLES, DEVICE_STYLES_WITH_STATUSBAR } from '@utils/theme';
-import { MarketSelectorProps, MarketListItemProps } from '@types';
-import { marketsList } from '@mock/index';
+import { moderateScale, Fonts, Colors, DEVICE_STYLES, DEVICE_STYLES_WITH_STATUSBAR } from '$utils/theme';
+import { MarketSelectorProps, MarketListItemProps } from '$types/common';
+import { marketsList } from '$mock/index';
 import RadioButton from './RadioButton';
 import BaseButton from './BaseButton';
 import { BaseBottomSheet } from './ui';

@@ -3,14 +3,8 @@ import { createBottomTabNavigator, BottomTabBarButtonProps } from '@react-naviga
 import React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
-export interface ToastMessage extends MessageOptions {
+export interface IToastMessage extends MessageOptions {
     isPositive?: boolean
-}
-
-export interface TabBarButtonComponentProps extends BottomTabBarButtonProps {
-    label: string
-    focusedIcon: React.ReactNode | SVGElement | any
-    notFocusedIcon: React.ReactNode | SVGElement | any
 }
 
 export interface ProfileMenusProps {

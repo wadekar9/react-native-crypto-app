@@ -1,9 +1,9 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
-import React, {memo} from 'react';
-import {Colors, Fonts, moderateScale} from '@utils/theme';
-import {BITCOIN_COIN} from '@assets/images/crypto';
-import {LineChart, Grid} from 'react-native-svg-charts';
-import {displayAmountWithUnit} from '@services/index';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import React, { memo } from 'react';
+import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { BITCOIN_COIN } from '$assets/images/crypto';
+import { LineChart, Grid } from 'react-native-svg-charts';
+import { displayAmountWithUnit } from '$utils/helpers';
 
 interface TransactionListItemProps {
   item: undefined;
@@ -34,24 +34,24 @@ const TransactionListItem: React.FC<TransactionListItemProps> = ({
           resizeMode={'cover'}
         />
       </View>
-      <View style={{flex: 0.82, flexDirection: 'row', alignItems: 'stretch',paddingVertical : moderateScale(8)}}>
-        <View style={{flex: 1}}>
-            <View style={{flex : 0.45,justifyContent:'center'}}>
-                <Text style={styles.titleStyle}>Bitcoin / BTC</Text>
-            </View>
-            <View style={{flex : 0.55,justifyContent:'space-evenly',alignItems: 'flex-start'}}>
-                <Text style={styles.labelStyle}>Amount: 5.445 BTC</Text>
-                <Text style={styles.labelStyle}>Price: $ 53.85</Text>
-            </View>
+      <View style={{ flex: 0.82, flexDirection: 'row', alignItems: 'stretch', paddingVertical: moderateScale(8) }}>
+        <View style={{ flex: 1 }}>
+          <View style={{ flex: 0.45, justifyContent: 'center' }}>
+            <Text style={styles.titleStyle}>Bitcoin / BTC</Text>
+          </View>
+          <View style={{ flex: 0.55, justifyContent: 'space-evenly', alignItems: 'flex-start' }}>
+            <Text style={styles.labelStyle}>Amount: 5.445 BTC</Text>
+            <Text style={styles.labelStyle}>Price: $ 53.85</Text>
+          </View>
         </View>
-        <View style={{flex: 1}}>
-            <View style={{flex : 0.45,justifyContent:'center',alignItems: 'flex-end',right : moderateScale(13)}}>
-                <Text style={styles.titleStyle}>Total: $122.32</Text>
-            </View>
-            <View style={{flex : 0.55,justifyContent:'space-evenly',alignItems: 'flex-end',right : moderateScale(13)}}>
-                <Text style={styles.labelStyle}>27 May, 09:28 AM</Text>
-                <Text style={[styles.labelStyle,{ color : Colors.GREEN }]}>Successfully completed</Text>
-            </View>
+        <View style={{ flex: 1 }}>
+          <View style={{ flex: 0.45, justifyContent: 'center', alignItems: 'flex-end', right: moderateScale(13) }}>
+            <Text style={styles.titleStyle}>Total: $122.32</Text>
+          </View>
+          <View style={{ flex: 0.55, justifyContent: 'space-evenly', alignItems: 'flex-end', right: moderateScale(13) }}>
+            <Text style={styles.labelStyle}>27 May, 09:28 AM</Text>
+            <Text style={[styles.labelStyle, { color: Colors.GREEN }]}>Successfully completed</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -71,14 +71,14 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     overflow: 'hidden',
   },
-  titleStyle : {
-    fontFamily : Fonts.CIRCULAR_STD_BOOK,
-    fontSize : moderateScale(18.5),
-    color : Colors.DARK_GREY,
+  titleStyle: {
+    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontSize: moderateScale(18.5),
+    color: Colors.DARK_GREY,
   },
-  labelStyle : {
-    fontFamily : Fonts.CIRCULAR_STD_BOOK,
-    fontSize : moderateScale(13),
-    color : Colors.GREY
+  labelStyle: {
+    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontSize: moderateScale(13),
+    color: Colors.GREY
   }
 });

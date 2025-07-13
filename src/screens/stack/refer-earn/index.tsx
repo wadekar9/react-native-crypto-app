@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const SendExchangeScreen = () => {
+const ReferEarn = () => {
   return (
     <View>
-      <Text>SendExchangeScreen</Text>
+      <Text>ReferEarn</Text>
     </View>
   )
 }
 
-export default SendExchangeScreen
+export default ReferEarn
 
 const styles = StyleSheet.create({})

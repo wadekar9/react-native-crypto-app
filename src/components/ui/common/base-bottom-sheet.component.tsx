@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native'
 import React, { memo, useImperativeHandle, useRef } from 'react'
 import ActionSheet, { ActionSheetRef, ActionSheetProps } from 'react-native-actions-sheet'
-import { moderateScale } from '@utils/theme';
+import { moderateScale } from '$utils/theme';
 
 interface BaseBottomSheetRef {
     open: () => void;

@@ -1,9 +1,9 @@
-import {StyleSheet, View} from 'react-native';
-import {SafeAreaView} from 'react-native';
-import React, {memo} from 'react';
-import {Colors} from '@utils/theme';
+import { StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native';
+import React, { memo } from 'react';
+import { Colors } from '$utils/theme';
 
-const BaseLayout: React.FC<{children: React.ReactNode}> = ({children}) => {
+const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={[styles.container]}>{children}</View>

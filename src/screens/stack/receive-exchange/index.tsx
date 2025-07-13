@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const ReceiveExchangeScreen = () => {
+const ReceiveExchange = () => {
   return (
     <View>
-      <Text>ReceiveExchangeScreen</Text>
+      <Text>ReceiveExchange</Text>
     </View>
   )
 }
 
-export default ReceiveExchangeScreen
+export default ReceiveExchange
 
 const styles = StyleSheet.create({})

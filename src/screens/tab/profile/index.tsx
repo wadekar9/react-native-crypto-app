@@ -6,27 +6,28 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import BaseLayout from '@components/BaseLayout';
-import {BottomTabsScreenProps} from '@utils/navigation';
-import {Colors, Fonts, moderateScale} from '@utils/theme';
-import ProfileContainer from '@components/ProfileContainer';
-import {ProfileMenus} from '@mock/index';
-import {RightChevron} from '@assets/icons';
+import BaseLayout from '$components/BaseLayout';
+import { BottomTabsScreenProps } from '$utils/navigation';
+import { Colors, Fonts, moderateScale } from '$utils/theme';
+import ProfileContainer from '$components/ProfileContainer';
+import { ProfileMenus } from '$mock/index';
+import { RightChevron } from '$assets/icons';
 import { useNavigation } from '@react-navigation/native';
+import { styles } from './styles';
 
-const ProfileScreen: React.FC<BottomTabsScreenProps<'ProfileScreen'>> = () => {
+const Profile: React.FC<BottomTabsScreenProps<'Profile'>> = () => {
 
   const navigation = useNavigation();
 
   return (
     <BaseLayout>
       <ScrollView
-        contentContainerStyle={{flexGrow: 1, padding: moderateScale(10)}}
+        contentContainerStyle={{ flexGrow: 1, padding: moderateScale(10) }}
         showsVerticalScrollIndicator={false}
         scrollEventThrottle={16}>
         <ProfileContainer />
 
-        <View style={{paddingTop: moderateScale(12)}}>
+        <View style={{ paddingTop: moderateScale(12) }}>
           {ProfileMenus.map((ele, index) => {
             let TabIcon = ele.icon;
 
@@ -69,20 +70,4 @@ const ProfileScreen: React.FC<BottomTabsScreenProps<'ProfileScreen'>> = () => {
   );
 };
 
-export default ProfileScreen;
-
-const styles = StyleSheet.create({
-  tabContainer: {
-    flexDirection: 'row',
-    alignItems: 'stretch',
-    height: moderateScale(60),
-    overflow: 'hidden',
-    borderColor: '#DFE2E4',
-    borderBottomWidth: 1.5,
-  },
-  tabLabelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
-    fontSize: moderateScale(18),
-    color: Colors.DARK_GREY,
-  },
-});
+export default Profile;

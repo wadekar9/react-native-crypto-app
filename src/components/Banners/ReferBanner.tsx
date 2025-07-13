@@ -1,8 +1,8 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React, {memo} from 'react';
-import {Fonts, Colors, moderateScale} from '@utils/theme';
-import {ReferBannerIcon} from '@assets/icons';
-import BannerButton from '@components/BannerButton';
+import { StyleSheet, Text, View } from 'react-native';
+import React, { memo } from 'react';
+import { Fonts, Colors, moderateScale } from '$utils/theme';
+import { ReferBannerIcon } from '$assets/icons';
+import BannerButton from '$components/BannerButton';
 
 const ReferBanner: React.FC = () => {
   return (
@@ -23,10 +23,10 @@ const ReferBanner: React.FC = () => {
           label="Refer Now"
           labelColor={Colors.ORANGE}
           onPress={() => console.log('jjjj')}
-          externalStyle={{alignSelf: 'center'}}
+          externalStyle={{ alignSelf: 'center' }}
         />
       </View>
-      <View style={{position: 'absolute', right: 20, bottom: 20}}>
+      <View style={{ position: 'absolute', right: 20, bottom: 20 }}>
         <ReferBannerIcon />
       </View>
     </View>

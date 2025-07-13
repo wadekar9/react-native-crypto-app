@@ -6,20 +6,21 @@ import {
   TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
-import {RootStackScreenProps} from '@utils/navigation';
-import BaseLayout from '@components/BaseLayout';
-import {Colors, Fonts, moderateScale} from '@utils/theme';
-import {LeftChevron, BackSpaceIcon} from '@assets/icons';
-import {customKeyboardKeys} from '@mock/index';
-import BaseButton from '@components/BaseButton';
-import {displayAmountWithUnit} from '@services/index';
+import { RootStackScreenProps } from '$utils/navigation';
+import BaseLayout from '$components/BaseLayout';
+import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { LeftChevron, BackSpaceIcon } from '$assets/icons';
+import { customKeyboardKeys } from '$mock/index';
+import BaseButton from '$components/BaseButton';
+import { styles } from './styles';
+import { displayAmountWithUnit } from '$utils/helpers';
 
 const percentageArr = ['0%', '10%', '25%', '50%', '75%', '100%'];
 
-const DepositWithdrawalScreen: React.FC<RootStackScreenProps<'DepositWithdrawalScreen'>> = ({route, navigation}) => {
-  const {requestType} = route.params;
+const DepositWithdrawal: React.FC<RootStackScreenProps<'DepositWithdrawal'>> = ({ route, navigation }) => {
+  const { requestType } = route.params;
 
-  const PercentageItem = ({item}: {item: string}) => {
+  const PercentageItem = ({ item }: { item: string }) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
@@ -46,12 +47,12 @@ const DepositWithdrawalScreen: React.FC<RootStackScreenProps<'DepositWithdrawalS
           onPress={() => navigation.goBack()}>
           <LeftChevron />
         </TouchableOpacity>
-        <View style={{flex: 0.9, justifyContent: 'center'}}>
+        <View style={{ flex: 0.9, justifyContent: 'center' }}>
           <Text style={styles.headerName}>{requestType} INR</Text>
         </View>
       </View>
-      <View style={{flex: 1, padding: moderateScale(13)}}>
-        <View style={{flex: 0.48}}>
+      <View style={{ flex: 1, padding: moderateScale(13) }}>
+        <View style={{ flex: 0.48 }}>
           <View
             style={{
               flex: 0.65,
@@ -78,7 +79,7 @@ const DepositWithdrawalScreen: React.FC<RootStackScreenProps<'DepositWithdrawalS
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
-                overflow : 'scroll',
+                overflow: 'scroll',
                 width: '100%',
               }}>
               {percentageArr.map((ele, index) => (
@@ -88,8 +89,8 @@ const DepositWithdrawalScreen: React.FC<RootStackScreenProps<'DepositWithdrawalS
           </View>
         </View>
         <View
-          style={{flex: 0.52, justifyContent: 'space-around', zIndex: 2000}}>
-          <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
+          style={{ flex: 0.52, justifyContent: 'space-around', zIndex: 2000 }}>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
             {customKeyboardKeys?.map((element, index) => {
               return (
                 <TouchableHighlight
@@ -111,7 +112,7 @@ const DepositWithdrawalScreen: React.FC<RootStackScreenProps<'DepositWithdrawalS
 
           <BaseButton
             label={`${requestType} INR`}
-            labelStyle={{textTransform: 'uppercase'}}
+            labelStyle={{ textTransform: 'uppercase' }}
           />
         </View>
       </View>
@@ -119,61 +120,4 @@ const DepositWithdrawalScreen: React.FC<RootStackScreenProps<'DepositWithdrawalS
   );
 };
 
-export default DepositWithdrawalScreen;
-
-const styles = StyleSheet.create({
-  headerName: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
-    fontSize: moderateScale(16),
-    color: Colors.PRIMARY_BLACK_COLOR,
-  },
-  headerContainer: {
-    flex: 0.08,
-    flexDirection: 'row',
-    alignItems: 'stretch',
-    zIndex: 2000,
-    elevation: 2,
-    shadowColor: Colors.PRIMARY_BLACK_COLOR,
-    backgroundColor: Colors.BACKGROUND_COLOR,
-  },
-  keyboardBtnContainer: {
-    backgroundColor: Colors.TRANSPARENT,
-    width: '33.3%',
-    height: moderateScale(55),
-  },
-  btnLabelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOLD,
-    fontSize: moderateScale(28),
-    color: Colors.PRIMARY_BLACK_COLOR,
-  },
-  labelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
-    fontSize: moderateScale(12),
-    color: Colors.GREY,
-  },
-  amountStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
-    fontSize: moderateScale(48),
-    color: Colors.PRIMARY_BLACK_COLOR,
-  },
-  currentBalanceLabelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
-    fontSize: moderateScale(14),
-    color: Colors.DARK_GREY,
-  },
-  percentageItemStyle: {
-    paddingHorizontal: moderateScale(10),
-    paddingVertical: moderateScale(5),
-    borderRadius: moderateScale(20),
-    borderColor: Colors.GREY,
-    borderWidth: 0.8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  percentageItemLabelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
-    fontSize: moderateScale(12),
-    color: Colors.GREY,
-    textAlign: 'center',
-  },
-});
+export default DepositWithdrawal;

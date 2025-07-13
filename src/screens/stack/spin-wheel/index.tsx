@@ -1,14 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const CoinScreen = () => {
+const SpinWheel = () => {
   return (
     <View>
-      <Text>CoinScreen</Text>
+      <Text>SpinWheel</Text>
     </View>
   )
 }
 
-export default CoinScreen
-
-const styles = StyleSheet.create({})
+export default SpinWheel

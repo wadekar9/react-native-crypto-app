@@ -1,7 +1,7 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { memo } from 'react';
-import {BaseButtonProps} from '@types';
-import {Colors, Fonts, moderateScale} from '@utils/theme';
+import { BaseButtonProps } from '$types/common';
+import { Colors, Fonts, moderateScale } from '$utils/theme';
 
 const BaseButton: React.FC<BaseButtonProps> = ({
   label,
@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
     fontSize: moderateScale(15),
     color: Colors.BACKGROUND_COLOR,
-    textAlign : 'center'
+    textAlign: 'center'
   },
 });

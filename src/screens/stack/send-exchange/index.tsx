@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const BuySellScreen = () => {
+const SendExchange = () => {
   return (
     <View>
-      <Text>BuySellScreen</Text>
+      <Text>SendExchange</Text>
     </View>
   )
 }
 
-export default BuySellScreen
+export default SendExchange
 
 const styles = StyleSheet.create({})

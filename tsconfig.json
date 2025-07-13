@@ -14,56 +14,47 @@
       "ES7"
     ],
     "paths": {
-      "@assets/*": [
+      "$assets/*": [
         "src/assets/*"
       ],
-      "@components/*": [
+      "$components/*": [
         "src/components/*"
       ],
-      "@constants/*": [
+      "$constants/*": [
         "src/constants/*"
       ],
-      "@context/*": [
+      "$context/*": [
         "src/context/*"
       ],
-      "@dev/*": [
+      "$dev/*": [
         "src/dev/*"
       ],
-      "@dto/*": [
+      "$dto/*": [
         "src/dto/*"
       ],
-      "@helpers/*": [
-        "src/helpers/*"
-      ],
-      "@hooks/*": [
+      "$hooks/*": [
         "src/hooks/*"
       ],
-      "@locales/*": [
+      "$locales/*": [
         "src/locales/*"
       ],
-      "@mock/*": [
+      "$mock/*": [
         "src/mock/*"
       ],
-      "@navigation/*": [
+      "$navigation/*": [
         "src/navigation/*"
       ],
-      "@screens/*": [
+      "$screens/*": [
         "src/screens/*"
       ],
-      "@store/*": [
+      "$store/*": [
         "src/store/*"
       ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@types/*": [
+      "$types/*": [
         "src/types/*"
       ],
-      "@utils/*": [
+      "$utils/*": [
         "src/utils/*"
-      ],
-      "@validators/*": [
-        "src/validators/*"
       ]
     }
   }

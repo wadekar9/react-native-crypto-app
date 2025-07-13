@@ -1,23 +1,20 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-
-import { BottomNavigationRoutes } from './Routes';
-import { TabBarButtonComponentProps } from '@types';
-import { GiftFocusedIcon, GiftUnfocusedIcon, GraphFocusedIcon, GraphUnfocusedIcon, HomeFocusedIcon, HomeUnfocusedIcon, PortfolioFocusedIcon, PortfolioUnfocusedIcon,ProfileFocusedIcon, ProfileUnfocusedIcon } from '@assets/icons';
-import { Colors, Fonts, moderateScale } from '@utils/theme';
-import { BottomTabsParamList } from '@utils/navigation';
+import { BottomTabRoutes } from './Routes';
+import { GiftFocusedIcon, GiftUnfocusedIcon, GraphFocusedIcon, GraphUnfocusedIcon, HomeFocusedIcon, HomeUnfocusedIcon, PortfolioFocusedIcon, PortfolioUnfocusedIcon, ProfileFocusedIcon, ProfileUnfocusedIcon } from '$assets/icons';
+import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { BottomTabsParamList } from '$utils/navigation';
 
 const BottomTab = createBottomTabNavigator<BottomTabsParamList>();
 
-const TabBarButtonComponent: React.FC<TabBarButtonComponentProps> = ({ label, accessibilityState, focusedIcon, notFocusedIcon, onPress } : TabBarButtonComponentProps) => {
+const TabBarButtonComponent: React.FC<any> = ({ label, accessibilityState, focusedIcon, notFocusedIcon, onPress }: any) => {
 
-    const isFocused : boolean = accessibilityState?.selected!;
+    const isFocused: boolean = accessibilityState?.selected!;
     const FocusedIcon = focusedIcon;
     const NotFocusedIcon = notFocusedIcon;
 
-    return(
+    return (
         <TouchableOpacity
             accessibilityRole={'tab'}
             activeOpacity={0.8}
@@ -27,28 +24,28 @@ const TabBarButtonComponent: React.FC<TabBarButtonComponentProps> = ({ label, ac
             {
                 isFocused ? <FocusedIcon key={'focused-icon'} /> : <NotFocusedIcon key={'unfocused-icon'} />
             }
-            <Text style={[styles.tabBarLabelStyle, { color : isFocused ? Colors.PRIMARY_COLOR : Colors.GREY }]}>{label}</Text>
+            <Text style={[styles.tabBarLabelStyle, { color: isFocused ? Colors.PRIMARY_COLOR : Colors.GREY }]}>{label}</Text>
         </TouchableOpacity>
     )
 }
 
-const BottomNavigator : React.FC = () => {
+const BottomNavigator: React.FC = () => {
     return (
         <BottomTab.Navigator
             screenOptions={{
-                headerShown : false,
-                tabBarShowLabel : true,
-                tabBarStyle : {
-                    height : moderateScale(65)
+                headerShown: false,
+                tabBarShowLabel: true,
+                tabBarStyle: {
+                    height: moderateScale(65)
                 }
             }}
         >
             <BottomTab.Screen
                 name='HomeScreen'
-                component={BottomNavigationRoutes.HomeScreen}
+                component={BottomTabRoutes.Home}
                 options={{
-                    title : 'Home',
-                    tabBarButton : (props) => <TabBarButtonComponent 
+                    title: 'Home',
+                    tabBarButton: (props: any) => <TabBarButtonComponent
                         {...props}
                         focusedIcon={HomeFocusedIcon}
                         notFocusedIcon={HomeUnfocusedIcon}
@@ -58,10 +55,10 @@ const BottomNavigator : React.FC = () => {
             />
             <BottomTab.Screen
                 name='PortfolioScreen'
-                component={BottomNavigationRoutes.PortfolioScreen}
+                component={BottomTabRoutes.Portfolio}
                 options={{
-                    title : 'Portfolio',
-                    tabBarButton : (props) => <TabBarButtonComponent 
+                    title: 'Portfolio',
+                    tabBarButton: (props: any) => <TabBarButtonComponent
                         {...props}
                         focusedIcon={PortfolioFocusedIcon}
                         notFocusedIcon={PortfolioUnfocusedIcon}
@@ -71,10 +68,10 @@ const BottomNavigator : React.FC = () => {
             />
             <BottomTab.Screen
                 name='RewardScreen'
-                component={BottomNavigationRoutes.RewardScreen}
+                component={BottomTabRoutes.Reward}
                 options={{
-                    title : 'Rewards',
-                    tabBarButton : (props) => <TabBarButtonComponent 
+                    title: 'Rewards',
+                    tabBarButton: (props: any) => <TabBarButtonComponent
                         {...props}
                         focusedIcon={GiftFocusedIcon}
                         notFocusedIcon={GiftUnfocusedIcon}
@@ -84,10 +81,10 @@ const BottomNavigator : React.FC = () => {
             />
             <BottomTab.Screen
                 name='MarketScreen'
-                component={BottomNavigationRoutes.MarketScreen}
+                component={BottomTabRoutes.Market}
                 options={{
-                    title : 'Market',
-                    tabBarButton : (props) => <TabBarButtonComponent 
+                    title: 'Market',
+                    tabBarButton: (props: any) => <TabBarButtonComponent
                         {...props}
                         focusedIcon={GraphFocusedIcon}
                         notFocusedIcon={GraphUnfocusedIcon}
@@ -97,10 +94,10 @@ const BottomNavigator : React.FC = () => {
             />
             <BottomTab.Screen
                 name='ProfileScreen'
-                component={BottomNavigationRoutes.ProfileScreen}
+                component={BottomTabRoutes.Profile}
                 options={{
-                    title : 'Profile',
-                    tabBarButton : (props) => <TabBarButtonComponent 
+                    title: 'Profile',
+                    tabBarButton: (props: any) => <TabBarButtonComponent
                         {...props}
                         focusedIcon={ProfileFocusedIcon}
                         notFocusedIcon={ProfileUnfocusedIcon}
@@ -115,13 +112,13 @@ const BottomNavigator : React.FC = () => {
 export default BottomNavigator
 
 const styles = StyleSheet.create({
-    tabButtonContainer : {
-        flex : 1,
-        alignItems : 'center',
-        justifyContent : 'space-evenly'
+    tabButtonContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'space-evenly'
     },
-    tabBarLabelStyle : {
-        fontFamily : Fonts.CIRCULAR_STD_BOOK,
-        fontSize : moderateScale(13)
+    tabBarLabelStyle: {
+        fontFamily: Fonts.CIRCULAR_STD_BOOK,
+        fontSize: moderateScale(13)
     }
 })

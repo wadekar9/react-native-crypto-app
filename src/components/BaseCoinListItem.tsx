@@ -1,9 +1,9 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
-import React, {memo} from 'react';
-import {Colors, Fonts, moderateScale} from '@utils/theme';
-import {BITCOIN_COIN} from '@assets/images/crypto';
-import {LineChart, Grid} from 'react-native-svg-charts';
-import { displayAmountWithUnit } from '@services/index';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import React, { memo } from 'react';
+import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { BITCOIN_COIN } from '$assets/images/crypto';
+import { LineChart, Grid } from 'react-native-svg-charts';
+import { displayAmountWithUnit } from '$utils/helpers';
 
 interface BaseCoinListItemProps {
   index: number;
@@ -21,7 +21,7 @@ const BaseCoinListItem: React.FC<BaseCoinListItemProps> = ({
   return (
     <View style={styles.container}>
       <View
-        style={{flex: 0.18, alignItems: 'center', justifyContent: 'center'}}>
+        style={{ flex: 0.18, alignItems: 'center', justifyContent: 'center' }}>
         <Image
           source={{
             uri: BITCOIN_COIN.uri,
@@ -34,22 +34,22 @@ const BaseCoinListItem: React.FC<BaseCoinListItemProps> = ({
           resizeMode={'cover'}
         />
       </View>
-      <View style={{flex: 0.82, flexDirection: 'row'}}>
-        <View style={{flex: 0.35, justifyContent: 'space-evenly'}}>
+      <View style={{ flex: 0.82, flexDirection: 'row' }}>
+        <View style={{ flex: 0.35, justifyContent: 'space-evenly' }}>
           <Text style={styles.labelStyle}>Bitcoin</Text>
           <Text style={styles.shortLabelStyle}>BTC</Text>
         </View>
         <View
-          style={{flex: 0.3, alignItems: 'stretch', justifyContent: 'center'}}>
+          style={{ flex: 0.3, alignItems: 'stretch', justifyContent: 'center' }}>
           <LineChart
-            style={{height: moderateScale(60), width: moderateScale(70)}}
+            style={{ height: moderateScale(60), width: moderateScale(70) }}
             data={data}
-            svg={{stroke: 'green'}}
-            contentInset={{top: moderateScale(20), bottom: moderateScale(20)}}>
+            svg={{ stroke: 'green' }}
+            contentInset={{ top: moderateScale(20), bottom: moderateScale(20) }}>
             <Grid />
           </LineChart>
         </View>
-        <View style={{flex: 0.35,alignItems : 'flex-end',justifyContent : 'space-evenly'}}>
+        <View style={{ flex: 0.35, alignItems: 'flex-end', justifyContent: 'space-evenly' }}>
           <Text style={styles.amountStyle}>{displayAmountWithUnit(5000)}</Text>
           <Text style={styles.percentageStyle}>21.33%</Text>
         </View>
@@ -86,19 +86,19 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     textTransform: 'capitalize',
   },
-  percentageStyle : {
+  percentageStyle: {
     fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
     fontSize: moderateScale(13),
     color: Colors.RED,
     textAlign: 'left',
-    right : moderateScale(12)
+    right: moderateScale(12)
   },
-  amountStyle : {
+  amountStyle: {
     fontFamily: Fonts.CIRCULAR_STD_BOOK,
     fontSize: moderateScale(16),
     color: Colors.DARK_GREY,
     textAlign: 'right',
     textTransform: 'capitalize',
-    right : moderateScale(12)
+    right: moderateScale(12)
   }
 });
