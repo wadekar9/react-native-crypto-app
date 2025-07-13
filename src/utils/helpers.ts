@@ -2,7 +2,7 @@ import { showMessage } from 'react-native-flash-message';
 import NetInfo from '@react-native-community/netinfo';
 import { Messages } from '$utils/messages';
 import { EMAIL_REGEX } from '$utils/constant';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { IToastMessage } from '$types/common';
 
 export const getTimeDuration = (seconds: number = 0): string => {
@@ -24,14 +24,14 @@ export const triggerToastMessage = ({ message, isPositive = false, type, duratio
         type: type ? type : isPositive ? 'success' : 'danger',
         message: message || Messages.SERVER,
         titleStyle: {
-            fontFamily: Fonts.GOTHAM_BOLD,
+            fontFamily: EFonts.BOLD,
             fontSize: moderateScale(14),
-            color: Colors.WHITE
+            color: EColors.WHITE
         },
         textStyle: {
-            fontFamily: Fonts.GOTHAM_BOLD,
+            fontFamily: EFonts.BOLD,
             fontSize: moderateScale(15),
-            color: Colors.WHITE
+            color: EColors.WHITE
         },
         icon: 'auto'
     });
