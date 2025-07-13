@@ -1,10 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BottomTabRoutes } from './Routes';
+import { BottomTabRoutes } from './routes';
 import { GiftFocusedIcon, GiftUnfocusedIcon, GraphFocusedIcon, GraphUnfocusedIcon, HomeFocusedIcon, HomeUnfocusedIcon, PortfolioFocusedIcon, PortfolioUnfocusedIcon, ProfileFocusedIcon, ProfileUnfocusedIcon } from '$assets/icons';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
-import { BottomTabsParamList } from '$utils/navigation';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
+import { BottomTabsParamList } from '$types/navigation';
+import { EBottomTabScreens } from '$constants/screens.contants';
 
 const BottomTab = createBottomTabNavigator<BottomTabsParamList>();
 
@@ -24,7 +25,7 @@ const TabBarButtonComponent: React.FC<any> = ({ label, accessibilityState, focus
             {
                 isFocused ? <FocusedIcon key={'focused-icon'} /> : <NotFocusedIcon key={'unfocused-icon'} />
             }
-            <Text style={[styles.tabBarLabelStyle, { color: isFocused ? Colors.PRIMARY_COLOR : Colors.GREY }]}>{label}</Text>
+            <Text style={[styles.tabBarLabelStyle, { color: isFocused ? EColors.PRIMARY_COLOR : EColors.GREY }]}>{label}</Text>
         </TouchableOpacity>
     )
 }
@@ -41,7 +42,7 @@ const BottomNavigator: React.FC = () => {
             }}
         >
             <BottomTab.Screen
-                name='HomeScreen'
+                name={EBottomTabScreens.HOME}
                 component={BottomTabRoutes.Home}
                 options={{
                     title: 'Home',
@@ -54,7 +55,7 @@ const BottomNavigator: React.FC = () => {
                 }}
             />
             <BottomTab.Screen
-                name='PortfolioScreen'
+                name={EBottomTabScreens.PORTFOLIO}
                 component={BottomTabRoutes.Portfolio}
                 options={{
                     title: 'Portfolio',
@@ -67,7 +68,7 @@ const BottomNavigator: React.FC = () => {
                 }}
             />
             <BottomTab.Screen
-                name='RewardScreen'
+                name={EBottomTabScreens.REWARD}
                 component={BottomTabRoutes.Reward}
                 options={{
                     title: 'Rewards',
@@ -80,7 +81,7 @@ const BottomNavigator: React.FC = () => {
                 }}
             />
             <BottomTab.Screen
-                name='MarketScreen'
+                name={EBottomTabScreens.MARKET}
                 component={BottomTabRoutes.Market}
                 options={{
                     title: 'Market',
@@ -93,7 +94,7 @@ const BottomNavigator: React.FC = () => {
                 }}
             />
             <BottomTab.Screen
-                name='ProfileScreen'
+                name={EBottomTabScreens.PROFILE}
                 component={BottomTabRoutes.Profile}
                 options={{
                     title: 'Profile',
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly'
     },
     tabBarLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_BOOK,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(13)
     }
 })
