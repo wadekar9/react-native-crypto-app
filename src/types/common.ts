@@ -3,6 +3,13 @@ import { createBottomTabNavigator, BottomTabBarButtonProps } from '@react-naviga
 import React from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
+export type ITheme = 'dark' | 'light';
+
+export interface AppThemeContextProps {
+    currentTheme: ITheme;
+    changeTheme: (theme: ITheme) => void;
+}
+
 export interface IToastMessage extends MessageOptions {
     isPositive?: boolean
 }
