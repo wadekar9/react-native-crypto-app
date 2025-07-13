@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const CoinScreen = () => {
+const Coin = () => {
     return (
         <View>
-            <Text>CoinScreen</Text>
+            <Text>Coin</Text>
         </View>
     )
 }
 
-export default CoinScreen
+export default Coin

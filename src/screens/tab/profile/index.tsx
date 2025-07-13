@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import BaseLayout from '$components/BaseLayout';
-import { BottomTabsScreenProps } from '$utils/navigation';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { BottomTabsScreenProps } from '$types/navigation';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import ProfileContainer from '$components/ProfileContainer';
 import { ProfileMenus } from '$mock/index';
 import { RightChevron } from '$assets/icons';
@@ -35,7 +35,7 @@ const Profile: React.FC<BottomTabsScreenProps<'Profile'>> = () => {
               <TouchableHighlight
                 activeOpacity={0.8}
                 accessibilityRole={'button'}
-                underlayColor={Colors.LIGHT_SKY}
+                underlayColor={EColors.LIGHT_SKY}
                 key={`${index}`}
                 style={[styles.tabContainer]}
                 onPress={() => ele?.screenName && navigation.navigate('HistoryScreen')}

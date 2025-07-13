@@ -1,17 +1,17 @@
-import { Colors, Fonts, moderateScale } from "$utils/theme";
+import { EColors, EFonts, moderateScale } from "$constants/styles.constants";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     labelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_BOLD,
+        fontFamily: EFonts.BOLD,
         fontSize: moderateScale(20),
-        color: Colors.PRIMARY_BLACK_COLOR,
+        color: EColors.PRIMARY_BLACK_COLOR,
         textAlign: 'left',
         textTransform: 'capitalize',
         margin: moderateScale(10),
     },
     buttonContainerText: {
-        fontFamily: Fonts.GOTHAM_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(15)
     },
     buttonContainer: {
@@ -23,6 +23,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         marginVertical: moderateScale(10),
         borderWidth: moderateScale(1.5),
-        borderColor: Colors.PRIMARY_COLOR
+        borderColor: EColors.PRIMARY_COLOR
     }
 });

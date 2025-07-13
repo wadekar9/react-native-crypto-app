@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
-import { RootStackScreenProps } from '$utils/navigation';
+import { RootStackScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { LeftChevron, BackSpaceIcon } from '$assets/icons';
 import { customKeyboardKeys } from '$mock/index';
 import BaseButton from '$components/BaseButton';
@@ -95,7 +95,7 @@ const DepositWithdrawal: React.FC<RootStackScreenProps<'DepositWithdrawal'>> = (
               return (
                 <TouchableHighlight
                   style={[styles.keyboardBtnContainer, element.externalStyle]}
-                  underlayColor={Colors.LIGHT_SKY}
+                  underlayColor={EColors.LIGHT_SKY}
                   accessibilityRole={'button'}
                   accessible={false}
                   onPress={() => console.log('jjjjj')}

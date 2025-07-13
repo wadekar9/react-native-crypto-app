@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React, { useEffect } from 'react';
-import { RootStackScreenProps } from '$utils/navigation';
+import { RootStackScreenProps } from '$types/navigation';
 import { LogoIcon } from '$assets/icons';
 import BaseLayout from '$components/BaseLayout';
 

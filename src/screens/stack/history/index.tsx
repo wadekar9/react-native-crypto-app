@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
-import { BottomTabsScreenProps, RootStackScreenProps } from '$utils/navigation';
+import { BottomTabsScreenProps, RootStackScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { LeftChevron } from '$assets/icons';
 import TransactionListItem from '$components/TransactionListItem';
 import { InvestmentBanner } from '$components/Banners';

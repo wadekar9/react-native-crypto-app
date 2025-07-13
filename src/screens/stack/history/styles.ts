@@ -1,11 +1,11 @@
-import { Colors, Fonts, moderateScale } from "$utils/theme";
+import { EColors, EFonts, moderateScale } from "$constants/styles.constants";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     headerName: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(16),
-        color: Colors.PRIMARY_BLACK_COLOR
+        color: EColors.PRIMARY_BLACK_COLOR
     },
     headerContainer: {
         flex: 0.08,
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         alignItems: 'stretch',
         zIndex: 2000,
         elevation: 2,
-        shadowColor: Colors.PRIMARY_BLACK_COLOR,
-        backgroundColor: Colors.BACKGROUND_COLOR
+        shadowColor: EColors.PRIMARY_BLACK_COLOR,
+        backgroundColor: EColors.BACKGROUND_COLOR
     }
 })

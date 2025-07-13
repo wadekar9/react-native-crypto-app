@@ -1,4 +1,4 @@
-import { Colors, Fonts, moderateScale } from "$utils/theme";
+import { EColors, EFonts, moderateScale } from "$constants/styles.constants";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -11,8 +11,8 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 1.5,
     },
     tabLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_BOOK,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(18),
-        color: Colors.DARK_GREY,
+        color: EColors.DARK_GREY,
     },
 });

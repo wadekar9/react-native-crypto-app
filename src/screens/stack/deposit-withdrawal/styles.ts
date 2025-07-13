@@ -1,11 +1,11 @@
-import { Colors, Fonts, moderateScale } from "$utils/theme";
+import { EColors, EFonts, moderateScale } from "$constants/styles.constants";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     headerName: {
-        fontFamily: Fonts.CIRCULAR_STD_BOOK,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(16),
-        color: Colors.PRIMARY_BLACK_COLOR,
+        color: EColors.PRIMARY_BLACK_COLOR,
     },
     headerContainer: {
         flex: 0.08,
@@ -13,47 +13,47 @@ export const styles = StyleSheet.create({
         alignItems: 'stretch',
         zIndex: 2000,
         elevation: 2,
-        shadowColor: Colors.PRIMARY_BLACK_COLOR,
-        backgroundColor: Colors.BACKGROUND_COLOR,
+        shadowColor: EColors.PRIMARY_BLACK_COLOR,
+        backgroundColor: EColors.BACKGROUND_COLOR,
     },
     keyboardBtnContainer: {
-        backgroundColor: Colors.TRANSPARENT,
+        backgroundColor: EColors.TRANSPARENT,
         width: '33.3%',
         height: moderateScale(55),
     },
     btnLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_BOLD,
+        fontFamily: EFonts.BOLD,
         fontSize: moderateScale(28),
-        color: Colors.PRIMARY_BLACK_COLOR,
+        color: EColors.PRIMARY_BLACK_COLOR,
     },
     labelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(12),
-        color: Colors.GREY,
+        color: EColors.GREY,
     },
     amountStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_BOOK,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(48),
-        color: Colors.PRIMARY_BLACK_COLOR,
+        color: EColors.PRIMARY_BLACK_COLOR,
     },
     currentBalanceLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(14),
-        color: Colors.DARK_GREY,
+        color: EColors.DARK_GREY,
     },
     percentageItemStyle: {
         paddingHorizontal: moderateScale(10),
         paddingVertical: moderateScale(5),
         borderRadius: moderateScale(20),
-        borderColor: Colors.GREY,
+        borderColor: EColors.GREY,
         borderWidth: 0.8,
         alignItems: 'center',
         justifyContent: 'center',
     },
     percentageItemLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(12),
-        color: Colors.GREY,
+        color: EColors.GREY,
         textAlign: 'center',
     },
 });

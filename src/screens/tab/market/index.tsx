@@ -1,10 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import React, { useCallback, useState } from 'react';
 import { DropIcon, SearchIcon } from '$assets/icons';
-import { BottomTabsScreenProps } from '$utils/navigation';
+import { BottomTabsScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
 import { LooserList, AllCoinsList, FavouritesList, GainerList } from '$components/Coins';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import MarketSelector from '$components/MarketSelector';
 import { styles } from './styles';
 
@@ -35,19 +35,19 @@ const Market: React.FC<BottomTabsScreenProps<'Market'>> = () => {
             <Text
               style={{
                 marginVertical: moderateScale(2),
-                fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+                fontFamily: EFonts.MEDIUM,
                 fontSize: moderateScale(20),
-                color: Colors.PRIMARY_BLACK_COLOR,
+                color: EColors.PRIMARY_BLACK_COLOR,
               }}>
               Market is down&nbsp;
-              <Text style={{ color: Colors.RED }}>11.23%</Text>
+              <Text style={{ color: EColors.RED }}>11.23%</Text>
             </Text>
             <Text
               style={{
                 marginVertical: moderateScale(2),
-                fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+                fontFamily: EFonts.MEDIUM,
                 fontSize: moderateScale(12),
-                color: Colors.GREY,
+                color: EColors.GREY,
               }}>
               In the past 24 hours
             </Text>

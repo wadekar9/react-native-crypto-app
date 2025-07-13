@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const BuySellScreen = () => {
+const BuySell = () => {
   return (
     <View>
-      <Text>BuySellScreen</Text>
+      <Text>BuySell</Text>
     </View>
   )
 }
 
-export default BuySellScreen
+export default BuySell

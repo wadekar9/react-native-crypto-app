@@ -1,9 +1,9 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { BottomTabsScreenProps } from '$utils/navigation';
+import { BottomTabsScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
 import { CouponsBanner, ReferBanner, SpinWheelBanner } from '$components/Banners';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { styles } from './styles';
 
 interface KeyValuePairContainerProps {
@@ -19,7 +19,7 @@ const KeyValuePairContainer: React.FC<KeyValuePairContainerProps> = ({ keyName, 
         <Text style={styles.keyValuePairContainerKey}>{keyName}</Text>
       </View>
       <View style={{ flex: 0.25, alignItems: 'flex-end' }}>
-        <Text style={{ ...styles.keyValuePairContainerValue, color: valueColor || Colors.DARK_GREY }}>{valueName}</Text>
+        <Text style={{ ...styles.keyValuePairContainerValue, color: valueColor || EColors.DARK_GREY }}>{valueName}</Text>
       </View>
     </View>
   )
@@ -38,8 +38,8 @@ const Reward: React.FC<BottomTabsScreenProps<'Reward'>> = () => {
           </View>
           <View style={{ flex: 0.7 }}>
             <KeyValuePairContainer key={'key-value-container'} keyName='No. of Coupons Won' valueName='06' />
-            <KeyValuePairContainer key={'key-value-container1'} keyName='Tokens won from Spin so far' valueName='08' valueColor={Colors.PRIMARY_COLOR} />
-            <KeyValuePairContainer key={'key-value-container2'} keyName='Remaining Coupons to Spin' valueName='01' valueColor={Colors.PRIMARY_COLOR} />
+            <KeyValuePairContainer key={'key-value-container1'} keyName='Tokens won from Spin so far' valueName='08' valueColor={EColors.PRIMARY_COLOR} />
+            <KeyValuePairContainer key={'key-value-container2'} keyName='Remaining Coupons to Spin' valueName='01' valueColor={EColors.PRIMARY_COLOR} />
           </View>
         </View>
         <View style={[styles.container, { height: moderateScale(136) }]}>
@@ -48,7 +48,7 @@ const Reward: React.FC<BottomTabsScreenProps<'Reward'>> = () => {
           </View>
           <View style={{ flex: 0.7 }}>
             <KeyValuePairContainer key={'key-value-container3'} keyName='Total No of referral' valueName='12' />
-            <KeyValuePairContainer key={'key-value-container4'} keyName='Total No of Qualified referral' valueName='05' valueColor={Colors.PRIMARY_COLOR} />
+            <KeyValuePairContainer key={'key-value-container4'} keyName='Total No of Qualified referral' valueName='05' valueColor={EColors.PRIMARY_COLOR} />
           </View>
         </View>
         <ReferBanner />

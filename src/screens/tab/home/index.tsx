@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text, View, FlatList } from 'react-native'
-import { BottomTabsScreenProps } from '$utils/navigation';
+import { BottomTabsScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import BaseCoinListItem from '$components/BaseCoinListItem';
 import { InvestmentBanner } from '$components/Banners';
 import { styles } from './styles';

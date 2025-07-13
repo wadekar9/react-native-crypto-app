@@ -1,20 +1,20 @@
-import { Colors, Fonts, moderateScale } from "$utils/theme";
+import { EColors, EFonts, moderateScale } from "$constants/styles.constants";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.WHITE,
+        backgroundColor: EColors.WHITE,
         borderRadius: moderateScale(12),
         overflow: 'hidden',
         marginVertical: moderateScale(5),
         elevation: 2,
-        shadowColor: Colors.BLACK,
+        shadowColor: EColors.BLACK,
         paddingVertical: moderateScale(8)
     },
     headerLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(20),
-        color: Colors.PRIMARY_BLACK_COLOR
+        color: EColors.PRIMARY_BLACK_COLOR
     },
     keyValuePairContainer: {
         flex: 1,
@@ -23,13 +23,13 @@ export const styles = StyleSheet.create({
         paddingHorizontal: moderateScale(18)
     },
     keyValuePairContainerValue: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
-        color: Colors.DARK_GREY,
+        fontFamily: EFonts.MEDIUM,
+        color: EColors.DARK_GREY,
         fontSize: moderateScale(14)
     },
     keyValuePairContainerKey: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
-        color: Colors.GREY,
+        fontFamily: EFonts.MEDIUM,
+        color: EColors.GREY,
         fontSize: moderateScale(12)
     }
 });

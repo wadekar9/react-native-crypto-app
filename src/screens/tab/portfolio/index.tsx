@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native';
-import { BottomTabsScreenProps } from '$utils/navigation';
+import { BottomTabsScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import BaseCoinListItem from '$components/BaseCoinListItem';
 import { PortfolioBanner } from '$components/Banners';
 import { styles } from './styles';
@@ -20,18 +20,18 @@ const Portfolio: React.FC<BottomTabsScreenProps<'Portfolio'>> = ({ navigation })
             accessibilityRole={'button'}
             accessible={true}
             onPress={() => navigation.navigate('DepositWithdrawalScreen', { requestType: 'Deposit' })}
-            style={[styles.buttonContainer, { backgroundColor: Colors.PRIMARY_COLOR }]}
+            style={[styles.buttonContainer, { backgroundColor: EColors.PRIMARY_COLOR }]}
           >
-            <Text style={[styles.buttonContainerText, { color: Colors.WHITE }]}>Deposit INR</Text>
+            <Text style={[styles.buttonContainerText, { color: EColors.WHITE }]}>Deposit INR</Text>
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.7}
             accessibilityRole={'button'}
             accessible={true}
             onPress={() => navigation.navigate('DepositWithdrawalScreen', { requestType: 'Withdraw' })}
-            style={[styles.buttonContainer, { backgroundColor: Colors.TRANSPARENT }]}
+            style={[styles.buttonContainer, { backgroundColor: EColors.TRANSPARENT }]}
           >
-            <Text style={[styles.buttonContainerText, { color: Colors.PRIMARY_COLOR }]}>Withdraw INR</Text>
+            <Text style={[styles.buttonContainerText, { color: EColors.PRIMARY_COLOR }]}>Withdraw INR</Text>
           </TouchableOpacity>
         </View>
       </View>
