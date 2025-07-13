@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, View } from 'react-native'
 import React, { memo } from 'react'
-import { Colors, moderateScale } from '$utils/theme';
+import { EColors, moderateScale } from '$constants/styles.constants';
 
 interface RadioButtonProps {
   selected: boolean;
@@ -9,8 +9,8 @@ interface RadioButtonProps {
 
 const RadioButton: React.FC<RadioButtonProps> = ({ selected, onPress }: RadioButtonProps) => {
   return (
-    <Pressable onPress={onPress} style={[styles.container, { borderColor: selected ? Colors.PRIMARY_COLOR : Colors.BORDER_COLOR }]}>
-      <View style={[styles.circle, { backgroundColor: selected ? Colors.PRIMARY_COLOR : Colors.BORDER_COLOR }]} />
+    <Pressable onPress={onPress} style={[styles.container, { borderColor: selected ? EColors.PRIMARY_COLOR : EColors.BORDER_COLOR }]}>
+      <View style={[styles.circle, { backgroundColor: selected ? EColors.PRIMARY_COLOR : EColors.BORDER_COLOR }]} />
     </Pressable>
   )
 }

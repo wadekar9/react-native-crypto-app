@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { memo } from 'react';
 import { BaseButtonProps } from '$types/common';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 
 const BaseButton: React.FC<BaseButtonProps> = ({
   label,
@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
     height: moderateScale(48),
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.PRIMARY_COLOR,
+    backgroundColor: EColors.PRIMARY_COLOR,
     borderRadius: moderateScale(4),
     overflow: 'hidden'
   },
   label: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(15),
-    color: Colors.BACKGROUND_COLOR,
+    color: EColors.BACKGROUND_COLOR,
     textAlign: 'center'
   },
 });

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { memo } from 'react';
-import { Fonts, Colors, moderateScale } from '$utils/theme';
+import { EFonts, EColors, moderateScale } from '$constants/styles.constants';
 import { displayAmountWithUnit } from '$utils/helpers';
 
 const PortfolioBanner = () => {
@@ -14,7 +14,7 @@ const PortfolioBanner = () => {
           <Text style={styles.labelStyle}>Holding value</Text>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Text style={styles.textStyle}>{displayAmountWithUnit(2897)}</Text>
-            <Text style={[styles.textStyle, { marginLeft: moderateScale(12), fontSize: moderateScale(12), color: Colors.LIGHT_SKY }]}>+9.22%</Text>
+            <Text style={[styles.textStyle, { marginLeft: moderateScale(12), fontSize: moderateScale(12), color: EColors.LIGHT_SKY }]}>+9.22%</Text>
           </View>
         </View>
         <View style={{ flex: 1, flexDirection: 'row', alignItems: 'stretch' }}>
@@ -37,7 +37,7 @@ export default memo(PortfolioBanner);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.PRIMARY_COLOR,
+    backgroundColor: EColors.PRIMARY_COLOR,
     width: '100%',
     height: moderateScale(200),
     overflow: 'hidden',
@@ -45,21 +45,21 @@ const styles = StyleSheet.create({
     padding: moderateScale(18)
   },
   labelStyle: {
-    fontFamily: Fonts.GOTHAM_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(11),
-    color: Colors.WHITE,
+    color: EColors.WHITE,
     textTransform: 'capitalize'
   },
   headerLabelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOLD,
+    fontFamily: EFonts.BOLD,
     fontSize: moderateScale(20),
-    color: Colors.WHITE,
+    color: EColors.WHITE,
     textTransform: 'capitalize'
   },
   textStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOLD,
+    fontFamily: EFonts.BOLD,
     fontSize: moderateScale(28),
-    color: Colors.WHITE
+    color: EColors.WHITE
   },
   verticalLineStyle: {
     width: StyleSheet.hairlineWidth + 0,

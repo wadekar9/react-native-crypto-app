@@ -1,7 +1,8 @@
 import { StyleSheet, View } from 'react-native'
 import React, { memo, useImperativeHandle, useRef } from 'react'
 import ActionSheet, { ActionSheetRef, ActionSheetProps } from 'react-native-actions-sheet'
-import { moderateScale } from '$utils/theme';
+import { EColors, moderateScale } from '$constants/styles.constants';
+import { useAppTheme } from '$hooks/common';
 
 interface BaseBottomSheetRef {
     open: () => void;
@@ -16,7 +17,7 @@ interface BaseBottomSheetProps {
 
 const BaseBottomSheet = React.forwardRef<BaseBottomSheetRef, BaseBottomSheetProps>((props, ref) => {
 
-    // const { colors, insets } = useAppTheme();
+    const { insets } = useAppTheme();
     const actionSheetRef = useRef<ActionSheetRef>(null);
 
     const status = useRef<'open' | 'close'>('close');
@@ -31,7 +32,7 @@ const BaseBottomSheet = React.forwardRef<BaseBottomSheetRef, BaseBottomSheetProp
             <ActionSheet
                 ref={actionSheetRef}
                 safeAreaInsets={insets}
-                containerStyle={{ ...styles.container, backgroundColor: colors.background1 }}
+                containerStyle={{ ...styles.container, backgroundColor: EColors.WHITE }}
                 indicatorStyle={styles.indicator}
                 gestureEnabled
                 overdrawEnabled={false}
@@ -45,7 +46,7 @@ const BaseBottomSheet = React.forwardRef<BaseBottomSheetRef, BaseBottomSheetProp
                     status.current = 'close';
                     if (props.sheetProps?.onClose) props.sheetProps?.onClose();
                 }}
-                overlayColor={colors.shadow}
+                overlayColor={EColors.TRANSPARENT}
                 {...props.sheetProps}
             >
                 <View style={{ height: props.sheetHeight || moderateScale(354) }}>
@@ -75,6 +76,6 @@ const styles = StyleSheet.create({
         borderRadius: moderateScale(100),
         marginTop: moderateScale(8),
         alignSelf: 'center',
-        backgroundColor: Colors.light.background
+        backgroundColor: EColors.WHITE
     }
 })

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { memo, useRef, useEffect, useState } from 'react';
-import { moderateScale, Fonts, Colors, DEVICE_STYLES, DEVICE_STYLES_WITH_STATUSBAR } from '$utils/theme';
+import { moderateScale, EFonts, EColors } from '$constants/styles.constants';
 import { MarketSelectorProps, MarketListItemProps } from '$types/common';
 import { marketsList } from '$mock/index';
 import RadioButton from './RadioButton';
@@ -34,7 +34,7 @@ const MarketSelector: React.FC<MarketSelectorProps> = ({ status = false, changeS
                                     onPress={() => setSelectedMarket(element.id)}
                                     style={styles.listContainer}
                                 >
-                                    <Text style={[styles.labelStyle, { color: (selectedMarket === element.id) ? Colors.PRIMARY_COLOR : Colors.DARK_GREY }]}>{element.label}</Text>
+                                    <Text style={[styles.labelStyle, { color: (selectedMarket === element.id) ? EColors.PRIMARY_COLOR : EColors.DARK_GREY }]}>{element.label}</Text>
                                     <RadioButton key={'custom-radio-btn'} onPress={() => console.log('kkkkk')} selected={selectedMarket === element.id} />
                                 </TouchableOpacity>
                             )
@@ -59,21 +59,21 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: moderateScale(12)
     },
     sheetIcon: {
-        backgroundColor: Colors.PRIMARY_COLOR,
+        backgroundColor: EColors.PRIMARY_COLOR,
         width: '25%',
         height: moderateScale(5),
         borderRadius: moderateScale(20),
     },
     container: {
-        backgroundColor: Colors.WHITE,
+        backgroundColor: EColors.WHITE,
         padding: moderateScale(15),
         justifyContent: 'space-between',
         flex: 1
     },
     headerLabelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(18),
-        color: Colors.BLACK
+        color: EColors.BLACK
     },
     listContainer: {
         flexDirection: 'row',
@@ -81,10 +81,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: moderateScale(50),
         borderBottomWidth: 1.2,
-        borderBottomColor: Colors.BORDER_COLOR
+        borderBottomColor: EColors.BORDER_COLOR
     },
     labelStyle: {
-        fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+        fontFamily: EFonts.MEDIUM,
         fontSize: moderateScale(14)
     }
 });

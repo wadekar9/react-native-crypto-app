@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React, { memo } from 'react'
-import { Colors, Fonts, moderateScale } from '$utils/theme'
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants'
 
 const ProfileContainer: React.FC = () => {
   return (
@@ -20,9 +20,9 @@ const ProfileContainer: React.FC = () => {
         </View>
       </View>
       <View style={{ flex: 0.52, justifyContent: 'space-evenly', alignItems: 'center' }}>
-        <Text style={{ fontFamily: Fonts.CIRCULAR_STD_BOLD, fontSize: moderateScale(20), color: Colors.WHITE }}>John Don</Text>
-        <Text style={{ fontFamily: Fonts.CIRCULAR_STD_MEDIUM, fontSize: moderateScale(14), color: Colors.WHITE }}>johndon123@hotmail.com</Text>
-        <Text style={{ fontFamily: Fonts.CIRCULAR_STD_MEDIUM, fontSize: moderateScale(14), color: Colors.WHITE }}>+91 039493243249</Text>
+        <Text style={{ fontFamily: EFonts.BOLD, fontSize: moderateScale(20), color: EColors.WHITE }}>John Don</Text>
+        <Text style={{ fontFamily: EFonts.MEDIUM, fontSize: moderateScale(14), color: EColors.WHITE }}>johndon123@hotmail.com</Text>
+        <Text style={{ fontFamily: EFonts.MEDIUM, fontSize: moderateScale(14), color: EColors.WHITE }}>+91 039493243249</Text>
       </View>
     </View>
   )
@@ -32,13 +32,13 @@ export default memo(ProfileContainer);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.PRIMARY_COLOR,
+    backgroundColor: EColors.PRIMARY_COLOR,
     width: '100%',
     height: moderateScale(210),
     overflow: 'hidden',
     borderRadius: moderateScale(12),
     elevation: 2,
-    shadowColor: Colors.BLACK
+    shadowColor: EColors.BLACK
   },
   imageContainer: {
     width: moderateScale(90),

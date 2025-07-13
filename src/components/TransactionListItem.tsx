@@ -1,9 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import React, { memo } from 'react';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { BITCOIN_COIN } from '$assets/images/crypto';
-import { LineChart, Grid } from 'react-native-svg-charts';
-import { displayAmountWithUnit } from '$utils/helpers';
 
 interface TransactionListItemProps {
   item: undefined;
@@ -50,7 +48,7 @@ const TransactionListItem: React.FC<TransactionListItemProps> = ({
           </View>
           <View style={{ flex: 0.55, justifyContent: 'space-evenly', alignItems: 'flex-end', right: moderateScale(13) }}>
             <Text style={styles.labelStyle}>27 May, 09:28 AM</Text>
-            <Text style={[styles.labelStyle, { color: Colors.GREEN }]}>Successfully completed</Text>
+            <Text style={[styles.labelStyle, { color: EColors.GREEN }]}>Successfully completed</Text>
           </View>
         </View>
       </View>
@@ -64,21 +62,21 @@ const styles = StyleSheet.create({
   container: {
     height: moderateScale(90),
     borderRadius: moderateScale(8),
-    backgroundColor: Colors.WHITE,
+    backgroundColor: EColors.WHITE,
     elevation: 2,
-    shadowColor: Colors.PRIMARY_BLACK_COLOR,
+    shadowColor: EColors.PRIMARY_BLACK_COLOR,
     flexDirection: 'row',
     alignItems: 'stretch',
     overflow: 'hidden',
   },
   titleStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(18.5),
-    color: Colors.DARK_GREY,
+    color: EColors.DARK_GREY,
   },
   labelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(13),
-    color: Colors.GREY
+    color: EColors.GREY
   }
 });

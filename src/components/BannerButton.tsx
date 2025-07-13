@@ -1,6 +1,6 @@
 import { StyleProp, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
 import React, { memo } from 'react';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 
 interface BannerButtonProps {
   label: string;
@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
   container: {
     width: moderateScale(110),
     height: moderateScale(38),
-    backgroundColor: Colors.WHITE,
+    backgroundColor: EColors.WHITE,
     overflow: 'hidden',
     borderRadius: moderateScale(4),
     alignItems: 'center',
     justifyContent: 'center'
   },
   labelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(13.5),
     textTransform: 'capitalize'
   }

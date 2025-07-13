@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native';
 import React, { memo } from 'react';
-import { Colors } from '$utils/theme';
+import { EColors } from '$constants/styles.constants';
 
 const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -16,6 +16,6 @@ export default memo(BaseLayout);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.BACKGROUND_COLOR,
+    backgroundColor: EColors.BACKGROUND_COLOR,
   },
 });

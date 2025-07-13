@@ -1,7 +1,7 @@
 import { View, FlatList, StyleSheet } from 'react-native';
 import React, { memo } from 'react';
 import BaseCoinListItem from '$components/BaseCoinListItem';
-import { DEVICE_STYLES, moderateScale } from '$utils/theme';
+import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
 
 const GainerList = () => {
   return (
@@ -38,6 +38,6 @@ export default memo(GainerList);
 const styles = StyleSheet.create({
   contaienr: {
     height: '100%',
-    width: DEVICE_STYLES.SCREEN_WIDTH
+    width: DEVICE_WIDTH
   }
 })

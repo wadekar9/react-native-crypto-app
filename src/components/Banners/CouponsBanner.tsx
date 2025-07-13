@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { memo } from 'react';
-import { Fonts, Colors, moderateScale } from '$utils/theme';
+import { EFonts, EColors, moderateScale } from '$constants/styles.constants';
 import { CouponsBannerIcon } from '$assets/icons';
 import BannerButton from '$components/BannerButton';
 
@@ -21,7 +21,7 @@ const CouponsBanner: React.FC = () => {
       <View style={styles.bottomContainer}>
         <BannerButton
           label="Share Now"
-          labelColor={Colors.VIOLET}
+          labelColor={EColors.VIOLET}
           onPress={() => console.log('jjjj')}
           externalStyle={{ alignSelf: 'center' }}
         />
@@ -37,7 +37,7 @@ export default memo(CouponsBanner);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.VIOLET,
+    backgroundColor: EColors.VIOLET,
     width: '100%',
     height: moderateScale(141),
     overflow: 'hidden',
@@ -47,16 +47,16 @@ const styles = StyleSheet.create({
     marginVertical: moderateScale(5)
   },
   sloganStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(15.5),
-    color: Colors.WHITE,
+    color: EColors.WHITE,
     textTransform: 'capitalize',
     width: '80%'
   },
   labelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(12),
-    color: Colors.WHITE,
+    color: EColors.WHITE,
     textTransform: 'capitalize'
   },
   bottomContainer: {

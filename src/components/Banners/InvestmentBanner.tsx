@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { memo } from 'react';
-import { Fonts, Colors, moderateScale } from '$utils/theme';
+import { EFonts, EColors, moderateScale } from '$constants/styles.constants';
 import { InvestmentBannerIcon } from '$assets/icons';
 import BannerButton from '$components/BannerButton';
 
@@ -12,7 +12,7 @@ const InvestmentBanner: React.FC = () => {
         <Text style={styles.sloganStyle}>Make your first investment today</Text>
       </View>
       <View style={styles.bottomContainer}>
-        <BannerButton label='Invest Now' labelColor={Colors.PRIMARY_COLOR} onPress={() => console.log('jjjj')} externalStyle={{ alignSelf: 'center' }} />
+        <BannerButton label='Invest Now' labelColor={EColors.PRIMARY_COLOR} onPress={() => console.log('jjjj')} externalStyle={{ alignSelf: 'center' }} />
         <InvestmentBannerIcon />
       </View>
     </View>
@@ -23,7 +23,7 @@ export default memo(InvestmentBanner);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.PRIMARY_COLOR,
+    backgroundColor: EColors.PRIMARY_COLOR,
     width: '100%',
     height: moderateScale(141),
     overflow: 'hidden',
@@ -32,15 +32,15 @@ const styles = StyleSheet.create({
     paddingVertical: moderateScale(10)
   },
   sloganStyle: {
-    fontFamily: Fonts.GOTHAM_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(16.5),
-    color: Colors.WHITE,
+    color: EColors.WHITE,
     textTransform: 'capitalize'
   },
   labelStyle: {
-    fontFamily: Fonts.GOTHAM_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(15),
-    color: Colors.WHITE,
+    color: EColors.WHITE,
     textTransform: 'capitalize'
   },
   bottomContainer: {

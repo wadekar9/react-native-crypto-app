@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import React, { memo } from 'react';
-import { Colors, Fonts, moderateScale } from '$utils/theme';
+import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { BITCOIN_COIN } from '$assets/images/crypto';
 import { LineChart, Grid } from 'react-native-svg-charts';
 import { displayAmountWithUnit } from '$utils/helpers';
@@ -64,39 +64,39 @@ const styles = StyleSheet.create({
   container: {
     height: moderateScale(72),
     borderRadius: moderateScale(6),
-    backgroundColor: Colors.WHITE,
+    backgroundColor: EColors.WHITE,
     elevation: 2,
-    shadowColor: Colors.PRIMARY_BLACK_COLOR,
+    shadowColor: EColors.PRIMARY_BLACK_COLOR,
     marginHorizontal: moderateScale(10),
     flexDirection: 'row',
     alignItems: 'stretch',
     overflow: 'hidden',
   },
   shortLabelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(14),
-    color: Colors.GREY,
+    color: EColors.GREY,
     textAlign: 'left',
     textTransform: 'uppercase',
   },
   labelStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(16),
-    color: Colors.PRIMARY_BLACK_COLOR,
+    color: EColors.PRIMARY_BLACK_COLOR,
     textAlign: 'left',
     textTransform: 'capitalize',
   },
   percentageStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_MEDIUM,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(13),
-    color: Colors.RED,
+    color: EColors.RED,
     textAlign: 'left',
     right: moderateScale(12)
   },
   amountStyle: {
-    fontFamily: Fonts.CIRCULAR_STD_BOOK,
+    fontFamily: EFonts.MEDIUM,
     fontSize: moderateScale(16),
-    color: Colors.DARK_GREY,
+    color: EColors.DARK_GREY,
     textAlign: 'right',
     textTransform: 'capitalize',
     right: moderateScale(12)
