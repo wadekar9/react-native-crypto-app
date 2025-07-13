@@ -46,17 +46,16 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>GothamBold.ttf</string>
-		<string>GothamLight.ttf</string>
-		<string>GothamMedium.ttf</string>
-		<string>GothamBook.ttf</string>
-		<string>CircularStd-Black.ttf</string>
-		<string>CircularStd-Bold.ttf</string>
-		<string>CircularStd-Book.ttf</string>
-		<string>CircularStd-Medium.ttf</string>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Thin.ttf</string>
 	</array>
 </dict>
 </plist>
