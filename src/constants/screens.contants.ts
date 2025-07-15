@@ -13,8 +13,6 @@ export enum EStackScreens {
 
 export enum EBottomTabScreens {
     HOME = 'Home',
-    PORTFOLIO = 'Portfolio',
-    REWARD = 'Reward',
     MARKET = 'Market',
-    PROFILE = 'Profile'
+    SETTINGS = 'Settings'
 }

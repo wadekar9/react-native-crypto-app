@@ -25,9 +25,7 @@ export type RootStackParamList = {
 export type BottomTabsParamList = {
     [EBottomTabScreens.HOME]: undefined;
     [EBottomTabScreens.MARKET]: undefined;
-    [EBottomTabScreens.PORTFOLIO]: undefined;
-    [EBottomTabScreens.PROFILE]: undefined;
-    [EBottomTabScreens.REWARD]: undefined;
+    [EBottomTabScreens.SETTINGS]: undefined;
 };
 
 

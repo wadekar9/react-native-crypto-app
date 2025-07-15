@@ -1,13 +1,9 @@
-import PortfolioFocusedIcon from './PortfolioFocusedIcon.svg';
-import PortfolioUnfocusedIcon from './PortfolioUnfocusedIcon.svg';
-import GiftFocusedIcon from './GiftFocusedIcon.svg';
-import GiftUnfocusedIcon from './GiftUnfocusedIcon.svg';
-import GraphFocusedIcon from './GraphFocusedIcon.svg';
-import GraphUnfocusedIcon from './GraphUnfocusedIcon.svg';
-import HomeFocusedIcon from './HomeFocusedIcon.svg';
-import HomeUnfocusedIcon from './HomeUnfocusedIcon.svg';
-import ProfileFocusedIcon from './ProfileFocusedIcon.svg';
-import ProfileUnfocusedIcon from './ProfileUnfocusedIcon.svg';
+import Home from './home.icon.svg'
+import Settings from './settings.icon.svg'
+import Market from './market.icon.svg'
+import Rewards from './rewards.icon.svg'
+import Portfolio from './portfolio.icon.svg'
+
 import CouponsBannerIcon from './CouponsBannerIcon.svg';
 import GetStartedBannerIcon from './GetStartedBannerIcon.svg';
 import InvestmentBannerIcon from './InvestmentBannerIcon.svg';
@@ -30,16 +26,11 @@ import NoData from './NoData.svg';
 import BackSpaceIcon from './BackSpaceIcon.svg';
 
 export {
-    PortfolioFocusedIcon,
-    PortfolioUnfocusedIcon,
-    GiftFocusedIcon,
-    GiftUnfocusedIcon,
-    GraphFocusedIcon,
-    GraphUnfocusedIcon,
-    HomeFocusedIcon,
-    HomeUnfocusedIcon,
-    ProfileFocusedIcon,
-    ProfileUnfocusedIcon,
+    Home,
+    Settings,
+    Market,
+    Rewards,
+    Portfolio,
     LogoIcon,
     CouponsBannerIcon,
     GetStartedBannerIcon,

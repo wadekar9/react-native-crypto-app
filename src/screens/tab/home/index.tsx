@@ -6,8 +6,9 @@ import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import BaseCoinListItem from '$components/BaseCoinListItem';
 import { InvestmentBanner } from '$components/Banners';
 import { styles } from './styles';
+import { EBottomTabScreens } from '$constants/screens.contants';
 
-const Home: React.FC<BottomTabsScreenProps<'Home'>> = ({ navigation }) => {
+const Home: React.FC<BottomTabsScreenProps<EBottomTabScreens.HOME>> = ({ navigation }) => {
 
   return (
     <BaseLayout>

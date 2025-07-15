@@ -7,10 +7,11 @@ import { LooserList, AllCoinsList, FavouritesList, GainerList } from '$component
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import MarketSelector from '$components/MarketSelector';
 import { styles } from './styles';
+import { EBottomTabScreens } from '$constants/screens.contants';
 
 const Tabs = ['All', 'Gainer', 'Looser', 'Favourites'];
 
-const Market: React.FC<BottomTabsScreenProps<'Market'>> = () => {
+const Market: React.FC<BottomTabsScreenProps<EBottomTabScreens.MARKET>> = () => {
 
   const [sheetStatus, setSheetStatus] = useState<boolean>(false);
 
