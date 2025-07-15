@@ -1,4 +1,4 @@
-import { Colors } from '$constants/colors.constants'
+import { EColors } from '$constants/styles.constants'
 import { AppThemeContext } from '$context/app-theme.context'
 import { useContext } from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -16,7 +16,7 @@ export const useAppTheme = () => {
     return {
         changeTheme,
         theme: currentTheme,
-        colors: Colors[currentTheme],
+        colors: EColors,
         insets
     }
 }
