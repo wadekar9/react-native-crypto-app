@@ -2,10 +2,9 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-nati
 import React, { useCallback, useState } from 'react';
 import { DropIcon, SearchIcon } from '$assets/icons';
 import { BottomTabsScreenProps } from '$types/navigation';
-import BaseLayout from '$components/BaseLayout';
-import { LooserList, AllCoinsList, FavouritesList, GainerList } from '$components/Coins';
+import { BaseLayout } from '$components/common';
+import { TopLoosersCoinsPage, AllCoinsPage, FavouritesCoinsPage, TopGainersCoinsPage } from '$components/pages';
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
-import MarketSelector from '$components/MarketSelector';
 import { styles } from './styles';
 import { EBottomTabScreens } from '$constants/screens.contants';
 
@@ -13,9 +12,6 @@ const Tabs = ['All', 'Gainer', 'Looser', 'Favourites'];
 
 const Market: React.FC<BottomTabsScreenProps<EBottomTabScreens.MARKET>> = () => {
 
-  const [sheetStatus, setSheetStatus] = useState<boolean>(false);
-
-  const toggleSheetStatus = useCallback((e: boolean) => setSheetStatus(e), [sheetStatus]);
 
   return (
     <BaseLayout>
@@ -64,18 +60,6 @@ const Market: React.FC<BottomTabsScreenProps<EBottomTabScreens.MARKET>> = () => 
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.middleContainer}>
-          <Text style={styles.labelStyle}>Coins</Text>
-          <TouchableOpacity
-            activeOpacity={0.7}
-            accessibilityRole={'button'}
-            accessible={true}
-            onPress={() => setSheetStatus(true)}
-            style={styles.dropContainer}>
-            <Text style={styles.selectedMarketStyle}>Market-INR</Text>
-            <DropIcon />
-          </TouchableOpacity>
-        </View>
       </View>
       <View style={{ flex: 0.8 }}>
         <View style={styles.tabContainer}>
@@ -108,19 +92,13 @@ const Market: React.FC<BottomTabsScreenProps<EBottomTabScreens.MARKET>> = () => 
             pinchGestureEnabled={false}
             scrollEventThrottle={16}
           >
-            <LooserList />
-            <AllCoinsList />
-            <FavouritesList />
-            <GainerList />
+            <TopLoosersCoinsPage />
+            <AllCoinsPage />
+            <FavouritesCoinsPage />
+            <TopGainersCoinsPage />
           </ScrollView>
         </View>
       </View>
-
-      <MarketSelector
-        key={'market-selector-sheet'}
-        changeStatus={toggleSheetStatus}
-        status={sheetStatus}
-      />
     </BaseLayout>
   );
 };

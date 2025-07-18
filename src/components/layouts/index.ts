@@ -1,0 +1,1 @@
+export { default as BaseCoinListItem } from './base-coin-list-item.component'

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, { useEffect } from 'react';
 import { RootStackScreenProps } from '$types/navigation';
 import { LogoIcon } from '$assets/icons';
-import BaseLayout from '$components/BaseLayout';
+import { BaseLayout } from '$components/common';
 import { EStackScreens } from '$constants/screens.contants';
 
 const Splash: React.FC<RootStackScreenProps<EStackScreens.SPLASH>> = ({ navigation, route }) => {

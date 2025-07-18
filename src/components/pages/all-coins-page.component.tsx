@@ -1,9 +1,9 @@
 import { View, FlatList, StyleSheet } from 'react-native';
 import React, { memo } from 'react';
-import BaseCoinListItem from '$components/BaseCoinListItem';
+import BaseCoinListItem from '$components/layouts/base-coin-list-item.component';
 import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
 
-const FavouritesList = () => {
+const AllCoinsPage = () => {
   return (
     <View style={styles.contaienr}>
       <FlatList
@@ -33,7 +33,7 @@ const FavouritesList = () => {
   );
 };
 
-export default memo(FavouritesList);
+export default memo(AllCoinsPage);
 
 const styles = StyleSheet.create({
   contaienr: {
