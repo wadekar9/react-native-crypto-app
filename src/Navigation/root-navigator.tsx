@@ -22,14 +22,8 @@ const RootNavigator: React.FC = () => {
       }}>
       <Stack.Screen name={EStackScreens.SPLASH} component={StackRoutes.Splash} />
       <Stack.Screen name={EStackScreens.BOTTOM_NAVIGATOR} component={BottomNavigator} />
-      <Stack.Screen name={EStackScreens.BUY_SELL} component={StackRoutes.BuySell} />
-      <Stack.Screen name={EStackScreens.COIN} component={StackRoutes.Coin} />
-      <Stack.Screen name={EStackScreens.DEPOSIT_WITHDRAWAL} component={StackRoutes.DepositWithdrawal} />
-      <Stack.Screen name={EStackScreens.RECEIVE_EXCHANGE} component={StackRoutes.ReceiveExchange} />
-      <Stack.Screen name={EStackScreens.SEND_EXCHANGE} component={StackRoutes.SendExchange} />
-      <Stack.Screen name={EStackScreens.SPIN_WHEEL} component={StackRoutes.SpinWheel} />
-      <Stack.Screen name={EStackScreens.REFER_EARN} component={StackRoutes.ReferEarn} />
-      <Stack.Screen name={EStackScreens.HISTORY} component={StackRoutes.History} />
+      <Stack.Screen name={EStackScreens.COIN_DETAILS} component={StackRoutes.CoinDetails} />
+      <Stack.Screen name={EStackScreens.FAVOURITES} component={StackRoutes.Favourites} />
     </Stack.Navigator>
   );
 };

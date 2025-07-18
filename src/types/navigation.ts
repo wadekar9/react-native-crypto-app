@@ -12,14 +12,8 @@ import { EBottomTabScreens, EStackScreens } from '$constants/screens.contants';
 export type RootStackParamList = {
     [EStackScreens.SPLASH]: undefined;
     [EStackScreens.BOTTOM_NAVIGATOR]: undefined;
-    [EStackScreens.BUY_SELL]: undefined,
-    [EStackScreens.COIN]: undefined,
-    [EStackScreens.DEPOSIT_WITHDRAWAL]: { requestType: string },
-    [EStackScreens.RECEIVE_EXCHANGE]: undefined,
-    [EStackScreens.SEND_EXCHANGE]: undefined,
-    [EStackScreens.SPIN_WHEEL]: undefined,
-    [EStackScreens.REFER_EARN]: undefined,
-    [EStackScreens.HISTORY]: undefined,
+    [EStackScreens.COIN_DETAILS]: undefined;
+    [EStackScreens.FAVOURITES]: undefined;
 };
 
 export type BottomTabsParamList = {
