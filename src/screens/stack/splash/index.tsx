@@ -3,11 +3,12 @@ import React, { useEffect } from 'react';
 import { RootStackScreenProps } from '$types/navigation';
 import { LogoIcon } from '$assets/icons';
 import BaseLayout from '$components/BaseLayout';
+import { EStackScreens } from '$constants/screens.contants';
 
-const Splash: React.FC<RootStackScreenProps<'Splash'>> = ({ navigation, route }) => {
+const Splash: React.FC<RootStackScreenProps<EStackScreens.SPLASH>> = ({ navigation, route }) => {
 
   useEffect(() => {
-    setTimeout(() => navigation.replace('BottomNavigator'), 2000);
+    setTimeout(() => navigation.replace(EStackScreens.BOTTOM_NAVIGATOR), 2000);
   }, []);
 
   return (

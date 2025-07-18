@@ -4,7 +4,6 @@ import { BottomTabsScreenProps } from '$types/navigation';
 import BaseLayout from '$components/BaseLayout';
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import BaseCoinListItem from '$components/BaseCoinListItem';
-import { InvestmentBanner } from '$components/Banners';
 import { styles } from './styles';
 import { EBottomTabScreens } from '$constants/screens.contants';
 
@@ -12,9 +11,6 @@ const Home: React.FC<BottomTabsScreenProps<EBottomTabScreens.HOME>> = ({ navigat
 
   return (
     <BaseLayout>
-      <View style={{ margin: moderateScale(10), marginBottom: 0 }}>
-        <InvestmentBanner />
-      </View>
       <View style={{ flex: 1 }}>
         <Text style={styles.labelStyle}>Trending Coins</Text>
         <View style={{ flex: 1 }}>
