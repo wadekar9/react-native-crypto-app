@@ -1,9 +1,11 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { memo } from 'react';
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { BITCOIN_COIN } from '$assets/images/crypto';
 import { LineChart, Grid } from 'react-native-svg-charts';
 import { displayAmountWithUnit } from '$utils/helpers';
+import { navigationRef } from '$types/navigation';
+import { EStackScreens } from '$constants/screens.contants';
 
 interface BaseCoinListItemProps {
   index: number;
@@ -19,7 +21,7 @@ const BaseCoinListItem: React.FC<BaseCoinListItemProps> = ({
   item,
 }: BaseCoinListItemProps) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={() => navigationRef.current?.navigate(EStackScreens.COIN_DETAILS)} style={styles.container}>
       <View
         style={{ flex: 0.18, alignItems: 'center', justifyContent: 'center' }}>
         <Image
@@ -54,7 +56,7 @@ const BaseCoinListItem: React.FC<BaseCoinListItemProps> = ({
           <Text style={styles.percentageStyle}>21.33%</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
