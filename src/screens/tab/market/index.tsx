@@ -6,7 +6,7 @@ import { BaseLayout } from '$components/common';
 import { TopLoosersCoinsPage, AllCoinsPage, FavouritesCoinsPage, TopGainersCoinsPage } from '$components/pages';
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { styles } from './styles';
-import { EBottomTabScreens } from '$constants/screens.contants';
+import { EBottomTabScreens } from '$constants/screens.constants';
 
 const Tabs = ['All', 'Gainer', 'Looser', 'Favourites'];
 

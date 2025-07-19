@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomTabRoutes } from './routes';
 import { moderateScale } from '$constants/styles.constants';
 import { BottomTabsParamList } from '$types/navigation';
-import { EBottomTabScreens } from '$constants/screens.contants';
+import { EBottomTabScreens } from '$constants/screens.constants';
 import { TabBarButton, TabBarNavigator } from '$components/navigation';
 import { useAppTheme } from '$hooks/common';
 import { Home, Market, Settings } from '$assets/icons';

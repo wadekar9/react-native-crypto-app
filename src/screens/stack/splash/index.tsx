@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { RootStackScreenProps } from '$types/navigation';
 import { LogoIcon } from '$assets/icons';
 import { BaseLayout } from '$components/common';
-import { EStackScreens } from '$constants/screens.contants';
+import { EStackScreens } from '$constants/screens.constants';
 
 const Splash: React.FC<RootStackScreenProps<EStackScreens.SPLASH>> = ({ navigation, route }) => {
 
