@@ -1,0 +1,1 @@
+export { useHomePageDetails } from './home-page-details.hook';
