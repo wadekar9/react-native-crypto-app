@@ -4,7 +4,7 @@ import { RootStackParamList } from '$types/navigation';
 import { StackRoutes } from './routes';
 import { EColors } from '$constants/styles.constants';
 import BottomNavigator from './bottom-navigator';
-import { EStackScreens } from '$constants/screens.contants';
+import { EStackScreens } from '$constants/screens.constants';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -24,6 +24,7 @@ const RootNavigator: React.FC = () => {
       <Stack.Screen name={EStackScreens.BOTTOM_NAVIGATOR} component={BottomNavigator} />
       <Stack.Screen name={EStackScreens.COIN_DETAILS} component={StackRoutes.CoinDetails} />
       <Stack.Screen name={EStackScreens.FAVOURITES} component={StackRoutes.Favourites} />
+      <Stack.Screen name={EStackScreens.TRENDING_COINS_NFTS} component={StackRoutes.TrendingCoinsNfts} />
     </Stack.Navigator>
   );
 };

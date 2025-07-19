@@ -7,13 +7,14 @@ import {
     BottomTabScreenProps
 } from '@react-navigation/bottom-tabs';
 import { createNavigationContainerRef } from '@react-navigation/native';
-import { EBottomTabScreens, EStackScreens } from '$constants/screens.contants';
+import { EBottomTabScreens, EStackScreens } from '$constants/screens.constants';
 
 export type RootStackParamList = {
     [EStackScreens.SPLASH]: undefined;
     [EStackScreens.BOTTOM_NAVIGATOR]: undefined;
     [EStackScreens.COIN_DETAILS]: undefined;
     [EStackScreens.FAVOURITES]: undefined;
+    [EStackScreens.TRENDING_COINS_NFTS]: { coins: string; nfts: string; };
 };
 
 export type BottomTabsParamList = {
