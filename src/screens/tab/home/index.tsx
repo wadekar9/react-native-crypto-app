@@ -1,37 +1,46 @@
 import React from 'react'
-import { Text, View, FlatList } from 'react-native'
-import { BottomTabsScreenProps } from '$types/navigation';
+import { Text, View, FlatList, ScrollView } from 'react-native'
+import { BottomTabsScreenProps, navigationRef } from '$types/navigation';
 import { moderateScale } from '$constants/styles.constants';
 import { styles } from './styles';
-import { EBottomTabScreens } from '$constants/screens.contants';
-import { BaseLayout } from '$components/common';
-import { BaseCoinListItem } from '$components/layouts';
+import { EBottomTabScreens, EStackScreens } from '$constants/screens.constants';
+import { BaseLayout, TextButton } from '$components/common';
+import { BaseCoinListItem, BaseNFTListItem } from '$components/layouts';
+import { useHomePageDetails } from '$hooks/modules';
 
-const Home: React.FC<BottomTabsScreenProps<EBottomTabScreens.HOME>> = ({ navigation }) => {
+const Home: React.FC<BottomTabsScreenProps<EBottomTabScreens.HOME>> = () => {
+
+  const { details, loading, fetchHomeDetails } = useHomePageDetails();
 
   return (
     <BaseLayout>
-      <View style={{ flex: 1 }}>
-        <Text style={styles.labelStyle}>Trending Coins</Text>
-        <View style={{ flex: 1 }}>
-          <FlatList
-            data={[...new Array(6)]}
-            keyExtractor={(_, index) => index.toString()}
-            showsVerticalScrollIndicator={false}
-            scrollEnabled={true}
-            scrollEventThrottle={16}
-            bouncesZoom={false}
-            legacyImplementation={true}
-            accessibilityRole={'list'}
-            accessible={true}
-            alwaysBounceVertical={false}
-            maxToRenderPerBatch={10}
-            ItemSeparatorComponent={() => <View style={{ marginVertical: moderateScale(5) }} />}
-            contentContainerStyle={{ flexGrow: 1, paddingVertical: moderateScale(8) }}
-            renderItem={({ item, index }) => <BaseCoinListItem key={`${index}`} item={item} index={index} />}
-          />
+      <ScrollView
+        contentContainerStyle={styles.contentContainer}
+        scrollEventThrottle={16}
+      >
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <Text style={styles.labelStyle}>Trending Cryptocurrencies</Text>
+            <TextButton label='View All' onPress={() => navigationRef.current?.navigate(EStackScreens.TRENDING_COINS_NFTS, { coins: JSON.stringify(details.coins), nfts: JSON.stringify([]) })} />
+          </View>
+          <View style={styles.content}>
+            {details.coins.slice(0, 5).map((coin, idx) => (
+              <BaseCoinListItem key={`${idx}`} element={coin} />
+            ))}
+          </View>
         </View>
-      </View>
+        <View style={styles.container}>
+          <View style={styles.header}>
+            <Text style={styles.labelStyle}>Trending NFTs</Text>
+            <TextButton label='View All' onPress={() => navigationRef.current?.navigate(EStackScreens.TRENDING_COINS_NFTS, { coins: JSON.stringify([]), nfts: JSON.stringify(details.nfts) })} />
+          </View>
+          <View style={styles.content}>
+            {details.nfts.slice(0, 5).map((coin, idx) => (
+              <BaseNFTListItem key={`${idx}`} element={coin} />
+            ))}
+          </View>
+        </View>
+      </ScrollView>
     </BaseLayout>
   )
 }
