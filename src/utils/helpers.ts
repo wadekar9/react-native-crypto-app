@@ -1,9 +1,9 @@
-import { showMessage } from 'react-native-flash-message';
-import NetInfo from '@react-native-community/netinfo';
-import { Messages } from '$utils/messages';
+import { MessageOptions, showMessage } from 'react-native-flash-message';
 import { EMAIL_REGEX } from '$utils/constant';
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
-import { IToastMessage } from '$types/common';
+import { fetch } from '@react-native-community/netinfo';
+import { EMessages } from '$constants/messages.constants';
+import { Platform, StatusBar } from 'react-native';
 
 export const getTimeDuration = (seconds: number = 0): string => {
     return `${Math.floor(seconds / 3600)
@@ -15,26 +15,59 @@ export const getTimeDuration = (seconds: number = 0): string => {
                 .padStart(2, "0")}`
 }
 
-export const triggerToastMessage = ({ message, isPositive = false, type, duration }: IToastMessage) => {
+export function showFlashMessage(props: MessageOptions) {
 
     showMessage({
-        autoHide: true,
+        ...props,
+        animated: true,
+        duration: 3000,
         position: 'top',
-        duration: duration || 3000,
-        type: type ? type : isPositive ? 'success' : 'danger',
-        message: message || Messages.SERVER,
-        titleStyle: {
-            fontFamily: EFonts.BOLD,
-            fontSize: moderateScale(14),
-            color: EColors.WHITE
-        },
+        statusBarHeight: Platform.OS == 'ios' ? StatusBar.currentHeight || 30 : 0,
+        hideOnPress: true,
         textStyle: {
-            fontFamily: EFonts.BOLD,
-            fontSize: moderateScale(15),
-            color: EColors.WHITE
+            fontFamily: EFonts.MEDIUM,
+            fontSize: moderateScale(14),
+            color: EColors.WHITE,
+            letterSpacing: 0.5
         },
-        icon: 'auto'
-    });
+        titleStyle: {
+            fontFamily: EFonts.SEMI_BOLD,
+            fontSize: moderateScale(15),
+            color: EColors.WHITE,
+            letterSpacing: 0.5
+        },
+        textProps: { numberOfLines: 2 },
+        titleProps: { numberOfLines: 2 }
+    })
+}
+
+export const showErrorFlashMessage = async (error: any) => {
+
+    const isConnected = (await fetch()).isConnected
+
+    if (!isConnected) {
+        showFlashMessage({
+            message: EMessages.UNABLE_PROCEED,
+            description: EMessages.INTERNET_CONNECTION,
+            type: 'danger'
+        })
+        return;
+    }
+
+    if (error) {
+        let message = typeof error?.message == 'string' ? error?.message : (typeof error === 'string') ? error : EMessages.WENT_WRONG;
+        showFlashMessage({
+            message: EMessages.UNABLE_PROCEED,
+            description: message,
+            type: 'danger'
+        })
+    } else {
+        showFlashMessage({
+            message: EMessages.UNABLE_PROCEED,
+            description: EMessages.WENT_WRONG,
+            type: 'danger'
+        })
+    }
 }
 
 export const validateEmail = (email: string) => new String(email).toLowerCase().match(EMAIL_REGEX);
@@ -55,18 +88,12 @@ export const displayDate = (date: number = Date.now()): string => (new Date(date
 */
 export const displatFullDate = (date: number = Date.now()): string => (new Date(date)).toLocaleString();
 
-/** 
-*    @returns {boolean} - internet connection
-*/
-export const internetConnection = async () => {
-    const state = await NetInfo.fetch();
-    if (!state.isConnected) {
-        triggerToastMessage({
-            message: 'No Internet',
-            description: Messages.NO_INTERNET_MESSAGE
-        })
-        return false;
-    } else {
-        return true;
+export const convertToQueryParams = (params: Record<string, any>) => {
+    const keyValuePairs = [];
+    for (const key in params) {
+        if (encodeURIComponent(params[key])) {
+            keyValuePairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(params[key]));
+        }
     }
-};
+    return keyValuePairs.length > 0 ? `?${keyValuePairs.join('&')}` : '';
+}
