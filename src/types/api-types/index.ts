@@ -1,0 +1,1 @@
+export type { ITrendingCategory, ITrendingCoin, ITrendingNFT, ITrendingApiResponse } from './trending-api.type';
