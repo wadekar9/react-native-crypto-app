@@ -3,32 +3,30 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
 import { EStackScreens } from '$constants/screens.constants';
-import { ITrendingCoin } from '$types/api-types';
+import { ITrendingCoin, ITrendingNFT } from '$types/api-types';
 import { navigationRef } from '$types/navigation';
 
-interface CoinListItemProps {
-  element: ITrendingCoin;
+interface NFTListItemProps {
+  element: ITrendingNFT;
 }
 
-const CoinListItem: React.FC<CoinListItemProps> = ({
+const NFTListItem: React.FC<NFTListItemProps> = ({
   element
 }) => {
-
-  const price = element.item.data.price >= 1 ? element.item.data.price.toFixed(2) : element.item.data.price.toFixed(5);
 
   return (
     <TouchableOpacity
       style={styles.container}
       activeOpacity={0.5}
       onPress={() => navigationRef.current?.navigate(EStackScreens.COIN_DETAILS)}
-      accessibilityLabel={`View details for ${element.item.name}`}
+      accessibilityLabel={`View details for ${element.name}`}
     >
       <View style={styles.iconWrapper}>
         <Image
-          source={{ uri: element.item.large }}
+          source={{ uri: element.thumb }}
           style={styles.icon}
           resizeMode="cover"
-          accessibilityLabel={`${element.item.name} icon`}
+          accessibilityLabel={`${element.name} icon`}
         />
       </View>
 
@@ -36,10 +34,10 @@ const CoinListItem: React.FC<CoinListItemProps> = ({
         <View style={styles.content}>
           <View style={styles.info}>
             <Text numberOfLines={1} style={styles.labelStyle}>
-              {element.item.name}
+              {element.name}
             </Text>
             <Text numberOfLines={1} style={styles.shortLabelStyle}>
-              {element.item.symbol}
+              {element.symbol}
             </Text>
           </View>
         </View>
@@ -49,15 +47,13 @@ const CoinListItem: React.FC<CoinListItemProps> = ({
             <SvgUri
               width={moderateScale(80)}
               height={moderateScale(40)}
-              uri={element.item.data.sparkline}
+              uri={element.data.sparkline}
             />
           </View>
 
           <View style={styles.price}>
-            <Text style={styles.amountStyle}>${price}</Text>
-            <Text style={styles.marketCap}>
-              #{element.item.market_cap_rank}
-            </Text>
+            <Text numberOfLines={1} style={styles.amountStyle}>{element?.data?.floor_price}</Text>
+            <Text numberOfLines={1} style={styles.marketCap}>{element.data.h24_volume}</Text>
           </View>
         </View>
       </View>
@@ -136,4 +132,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default memo(CoinListItem);
+export default memo(NFTListItem);
