@@ -10,7 +10,6 @@ module.exports = {
           '$constants': './src/constants',
           '$context': './src/context',
           '$hooks': './src/hooks',
-          '$mock': './src/mock',
           '$navigation': './src/navigation',
           '$screens': './src/screens',
           '$types': './src/types',

@@ -38,9 +38,6 @@
       "$locales/*": [
         "src/locales/*"
       ],
-      "$mock/*": [
-        "src/mock/*"
-      ],
       "$navigation/*": [
         "src/navigation/*"
       ],
