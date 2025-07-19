@@ -5,7 +5,7 @@ import { EColors } from '$constants/styles.constants';
 
 const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container]}>
       <View style={[styles.container]}>{children}</View>
     </SafeAreaView>
   );

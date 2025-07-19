@@ -1,7 +1,13 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleProp, StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native';
 import React, { memo } from 'react';
-import { BaseButtonProps } from '$types/common';
 import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
+
+interface BaseButtonProps {
+  label: string;
+  onPress?: () => void;
+  containerStyle?: StyleProp<ViewStyle>;
+  labelStyle?: StyleProp<TextStyle>;
+}
 
 const BaseButton: React.FC<BaseButtonProps> = ({
   label,
