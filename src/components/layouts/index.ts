@@ -1,2 +1,6 @@
 export { default as BaseCoinListItem } from './base-coin-list-item.component'
 export { default as BaseNFTListItem } from './base-nft-list-item.component'
+export { default as MarketPageHeader } from './market-page-header.component'
+export { default as MarketPageContent } from './market-page-content.component'
+export { default as MarketPageTabNavigator } from './market-page-tab-navigator.component'
+export { default as MarketCoinListItem } from './market-coin-list-item.component'
