@@ -4,6 +4,8 @@ export enum EStackScreens {
     COIN_DETAILS = 'CoinDetails',
     FAVOURITES = 'Favourites',
     TRENDING_COINS_NFTS = 'TrendingCoinsNfts',
+    SEARCH = 'Search',
+    CURRENCY_CONVERTER = 'CurrencyConverter',
 }
 
 export enum EBottomTabScreens {

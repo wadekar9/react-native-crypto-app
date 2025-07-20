@@ -25,6 +25,8 @@ const RootNavigator: React.FC = () => {
       <Stack.Screen name={EStackScreens.COIN_DETAILS} component={StackRoutes.CoinDetails} />
       <Stack.Screen name={EStackScreens.FAVOURITES} component={StackRoutes.Favourites} />
       <Stack.Screen name={EStackScreens.TRENDING_COINS_NFTS} component={StackRoutes.TrendingCoinsNfts} />
+      <Stack.Screen name={EStackScreens.CURRENCY_CONVERTER} component={StackRoutes.CurrencyConverter} />
+      <Stack.Screen name={EStackScreens.SEARCH} component={StackRoutes.Search} />
     </Stack.Navigator>
   );
 };
