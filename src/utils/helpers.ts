@@ -4,6 +4,9 @@ import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { fetch } from '@react-native-community/netinfo';
 import { EMessages } from '$constants/messages.constants';
 import { Platform, StatusBar } from 'react-native';
+import { IMarketCoin } from '$types/api-types';
+import { getStorageValue, setStorageValue } from './storage';
+import { EStorageKeys } from '$constants/storage.constants';
 
 export const getTimeDuration = (seconds: number = 0): string => {
     return `${Math.floor(seconds / 3600)
@@ -96,4 +99,17 @@ export const convertToQueryParams = (params: Record<string, any>) => {
         }
     }
     return keyValuePairs.length > 0 ? `?${keyValuePairs.join('&')}` : '';
+}
+
+export const handleAddCoinToFavourite = async (coins: IMarketCoin[]): Promise<void> => {
+    try {
+        const response = await getStorageValue(EStorageKeys.FAVOURITES_COINS);
+        if (response) {
+            const prevCoins = JSON.parse(response) as Array<IMarketCoin>;
+            const updatedCoins = prevCoins.concat(coins);
+            setStorageValue(EStorageKeys.FAVOURITES_COINS, JSON.stringify(updatedCoins));
+        }
+    } catch (error) {
+        console.error("ERROR WHILE UPDATING FAVOURITE COINS");
+    }
 }

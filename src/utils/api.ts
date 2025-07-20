@@ -1,4 +1,6 @@
 import { ITrendingApiResponse } from '$types/api-types';
+import { IMarketCoin } from '$types/api-types/coins-module-api.types';
+import { IGlobalMarketApiResponse } from '$types/api-types/global-market-api.type';
 import { axiosInstance } from './axios-instance';
 import {
     CoinDataDto,
@@ -24,7 +26,8 @@ const API_ENDPOINTS = {
     EXCHANGE_RATES: '/exchange_rates',
     EXCHANGES: '/exchanges',
     EXCHANGE_LIST: '/exchanges/list',
-    TRENDING: '/search/trending'
+    TRENDING: '/search/trending',
+    GLOBAL: '/global'
 } as const;
 
 // Generic request handler to reduce repetition
@@ -42,7 +45,7 @@ const makeRequest = async <T>(endpoint: string, params?: Record<string, any>): P
 
 const apiService = {
     // Fetch all coins market data
-    fetchCoinsMarketApi: (params: CoinsMarketDto) => makeRequest<unknown>(API_ENDPOINTS.COINS_MARKET, params),
+    fetchCoinsMarketApi: (params: CoinsMarketDto) => makeRequest<Array<IMarketCoin>>(API_ENDPOINTS.COINS_MARKET, params),
 
     // Fetch coins list
     fetchCoinsListApi: (params: CoinsListDto) => makeRequest<unknown>(API_ENDPOINTS.COINS_LIST, params),
@@ -87,7 +90,10 @@ const apiService = {
     fetchCoinDataApi: (id: string, params: CoinDataDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}`, params),
 
     // Fetch trending coins and NFTs
-    fetchTrendingDataApi: () => makeRequest<ITrendingApiResponse>(API_ENDPOINTS.TRENDING)
+    fetchTrendingDataApi: () => makeRequest<ITrendingApiResponse>(API_ENDPOINTS.TRENDING),
+
+    // Fetch trending coins and NFTs
+    fetchGlobalMarketDataApi: () => makeRequest<IGlobalMarketApiResponse>(API_ENDPOINTS.GLOBAL)
 };
 
 export default apiService;
