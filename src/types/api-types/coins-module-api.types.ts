@@ -27,4 +27,5 @@ export interface IMarketCoin {
     readonly last_updated: Date;
     readonly sparkline_in_7d: { readonly price: number[]; };
     readonly price_change_percentage_24h_in_currency: number;
+    readonly price_change_percentage_7d_in_currency: number;
 }

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { SvgUri } from 'react-native-svg';
+import { LineChart, Grid } from 'react-native-svg-charts'
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
 import { EStackScreens } from '$constants/screens.constants';
 import { IMarketCoin } from '$types/api-types';
@@ -44,18 +44,18 @@ const MarketCoinListItem: React.FC<MarketCoinListItemProps> = ({
 
                 <View style={styles.chartPriceWrapper}>
                     <View style={styles.sparkLine}>
-                        {/* <SvgUri
-                            width={moderateScale(80)}
-                            height={moderateScale(40)}
-                            uri={element.sparkline}
-                        /> */}
+                        <LineChart
+                            style={{ height: moderateScale(40) }}
+                            data={element.sparkline_in_7d.price}
+                            svg={{ stroke: element.price_change_percentage_7d_in_currency > 0 ? EColors.GREEN : EColors.RED }}
+                        >
+                            <Grid />
+                        </LineChart>
                     </View>
 
                     <View style={styles.price}>
                         <Text style={styles.amountStyle}>${element.current_price}</Text>
-                        <Text style={styles.marketCap}>
-                            #{element.market_cap_rank}
-                        </Text>
+                        <Text style={styles.marketCap}>{element.total_volume}</Text>
                     </View>
                 </View>
             </View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         aspectRatio: 1,
     },
     content: {
-        flex: 0.50,
+        flex: 0.40,
         flexDirection: 'row',
         alignItems: 'center',
         alignSelf: 'stretch'
@@ -95,6 +95,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     sparkLine: {
+        height: moderateScale(50),
+        width: moderateScale(80)
     },
     price: {
         alignSelf: 'flex-end',

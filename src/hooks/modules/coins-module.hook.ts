@@ -20,7 +20,7 @@ export const useAllCoins = () => {
                 page: pageNo,
                 per_page: 10,
                 sparkline: true,
-
+                price_change_percentage: '7d'
             })
             if (response.length < 10) setMoreLoading(false);
             (pageNo == 1) ? setCoins(response) : setCoins((prev) => ([...prev, ...response]));
@@ -68,7 +68,8 @@ export const useHighVolumeCoins = () => {
                 order: 'volume_desc',
                 page: pageNo,
                 per_page: 10,
-                sparkline: true
+                sparkline: true,
+                price_change_percentage: '7d'
             })
             if (response.length < 10) setMoreLoading(false);
             (pageNo == 1) ? setCoins(response) : setCoins((prev) => ([...prev, ...response]));
@@ -116,7 +117,8 @@ export const useLowVolumeCoins = () => {
                 order: 'volume_asc',
                 page: pageNo,
                 per_page: 10,
-                sparkline: true
+                sparkline: true,
+                price_change_percentage: '7d'
             })
             if (response.length < 10) setMoreLoading(false);
             (pageNo == 1) ? setCoins(response) : setCoins((prev) => ([...prev, ...response]));
