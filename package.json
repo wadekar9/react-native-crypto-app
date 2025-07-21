@@ -17,6 +17,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-native-community/netinfo": "^11.4.1",
+    "@react-native-masked-view/masked-view": "^0.3.2",
     "@react-navigation/bottom-tabs": "6.6.1",
     "@react-navigation/native": "6.1.18",
     "@react-navigation/native-stack": "6.11.0",
@@ -28,8 +29,10 @@
     "react-native-config": "^1.5.5",
     "react-native-flash-message": "^0.4.2",
     "react-native-gesture-handler": "2.24.0",
+    "react-native-linear-gradient": "^2.8.3",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "^4.11.1",
+    "react-native-skeleton-placeholder": "^5.2.4",
     "react-native-svg": "15.11.2",
     "react-native-svg-charts": "^5.4.0"
   },
