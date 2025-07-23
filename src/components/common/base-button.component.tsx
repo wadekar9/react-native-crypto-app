@@ -7,6 +7,7 @@ interface BaseButtonProps {
   onPress?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
+  disabled?: boolean;
 }
 
 const BaseButton: React.FC<BaseButtonProps> = ({
@@ -14,6 +15,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   containerStyle,
   labelStyle,
   onPress,
+  disabled
 }: BaseButtonProps) => {
   return (
     <TouchableOpacity
@@ -21,6 +23,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
       accessible={true}
       activeOpacity={0.9}
       onPress={onPress}
+      disabled={disabled}
       style={[styles.container, containerStyle]}>
       <Text style={[styles.label, labelStyle]}>{label}</Text>
     </TouchableOpacity>

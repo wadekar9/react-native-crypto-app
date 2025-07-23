@@ -25,6 +25,8 @@ import DropIcon from './DropIcon.svg';
 import NoData from './NoData.svg';
 import BackSpaceIcon from './BackSpaceIcon.svg';
 import MoreIcon from './more.icon.svg';
+import ChevronDown from './chevron-down.icon.svg'
+import ChevronUp from './chevron-up.icon.svg'
 
 export {
     Home,
@@ -51,5 +53,7 @@ export {
     DropIcon,
     NoData,
     BackSpaceIcon,
-    MoreIcon
+    MoreIcon,
+    ChevronDown,
+    ChevronUp
 }
