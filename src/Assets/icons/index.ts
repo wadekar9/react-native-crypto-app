@@ -24,6 +24,7 @@ import SearchIcon from './SearchIcon.svg';
 import DropIcon from './DropIcon.svg';
 import NoData from './NoData.svg';
 import BackSpaceIcon from './BackSpaceIcon.svg';
+import MoreIcon from './more.icon.svg';
 
 export {
     Home,
@@ -49,5 +50,6 @@ export {
     SearchIcon,
     DropIcon,
     NoData,
-    BackSpaceIcon
+    BackSpaceIcon,
+    MoreIcon
 }

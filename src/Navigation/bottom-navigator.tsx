@@ -6,7 +6,7 @@ import { BottomTabsParamList } from '$types/navigation';
 import { EBottomTabScreens } from '$constants/screens.constants';
 import { TabBarButton, TabBarNavigator } from '$components/navigation';
 import { useAppTheme } from '$hooks/common';
-import { Home, Market, Settings } from '$assets/icons';
+import { Home, Market, MoreIcon } from '$assets/icons';
 
 const BottomTab = createBottomTabNavigator<BottomTabsParamList>();
 
@@ -53,13 +53,13 @@ const BottomNavigator: React.FC = () => {
                 name={EBottomTabScreens.SETTINGS}
                 component={BottomTabRoutes.Settings}
                 options={{
-                    title: 'Settings',
+                    title: 'More',
                     tabBarButton: (props) => (
                         <TabBarButton
                             {...props}
                             key={'settings'}
                             theme={theme}
-                            icon={({ color }) => <Settings fill={color} width={moderateScale(26)} height={moderateScale(26)} />}
+                            icon={({ color }) => <MoreIcon fill={color} width={moderateScale(26)} height={moderateScale(26)} />}
                         />
                     )
                 }}
