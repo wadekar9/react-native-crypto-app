@@ -1,0 +1,1 @@
+export interface ISimpleCoinPriceApiResponse extends Record<string, Record<string, number>> { }

@@ -65,3 +65,8 @@ export interface CoinDataDto extends Pick<ExchangesTikcersDto, 'dex_pair_format'
     developer_data?: boolean;
     sparkline?: boolean;
 }
+
+export interface ICoinPriceSimpleDto {
+    ids: string;
+    vs_currencies: string;
+}

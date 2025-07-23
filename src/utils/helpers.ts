@@ -8,16 +8,6 @@ import { IMarketCoin } from '$types/api-types';
 import { getStorageValue, setStorageValue } from './storage';
 import { EStorageKeys } from '$constants/storage.constants';
 
-export const getTimeDuration = (seconds: number = 0): string => {
-    return `${Math.floor(seconds / 3600)
-        .toString()
-        .padStart(2, "0")}:${Math.floor((seconds % 3600) / 60)
-            .toString()
-            .padStart(2, "0")}:${(seconds % 60).toFixed(0)
-                .toString()
-                .padStart(2, "0")}`
-}
-
 export function showFlashMessage(props: MessageOptions) {
 
     showMessage({
@@ -73,12 +63,6 @@ export const showErrorFlashMessage = async (error: any) => {
     }
 }
 
-export const validateEmail = (email: string) => new String(email).toLowerCase().match(EMAIL_REGEX);
-
-export const displayAmountWithUnit = (amount: number = 0): string => Number(amount).toLocaleString('en-IN', { style: 'currency', currency: 'INR' });
-
-export const displayRating = (rat: number, from: number = 5) => `(${rat}/${from})`;
-
 /** 
     @param {number} - Date.now() date
     @returns {string} - date string with "dddd, LT" format
@@ -111,5 +95,39 @@ export const handleAddCoinToFavourite = async (coins: IMarketCoin[]): Promise<vo
         }
     } catch (error) {
         console.error("ERROR WHILE UPDATING FAVOURITE COINS");
+    }
+}
+
+export const formatNumber = (
+    value: number | string,
+    options?: {
+        minimumFractionDigits?: number
+        maximumFractionDigits?: number
+        currency?: string // e.g., 'USD', 'INR'
+        style?: 'decimal' | 'currency'
+        locale?: string // default: 'en-US'
+    }
+): string => {
+    const num = typeof value === 'string' ? parseFloat(value) : value
+    if (isNaN(num)) return '0'
+
+    const {
+        minimumFractionDigits = 2,
+        maximumFractionDigits = 6,
+        currency,
+        style = currency ? 'currency' : 'decimal',
+        locale = 'en-US',
+    } = options || {}
+
+    try {
+        return num.toLocaleString(locale, {
+            style,
+            currency,
+            minimumFractionDigits,
+            maximumFractionDigits,
+        })
+    } catch (e) {
+        // fallback if toLocaleString fails
+        return num.toFixed(minimumFractionDigits)
     }
 }
