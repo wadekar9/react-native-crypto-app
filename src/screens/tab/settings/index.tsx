@@ -18,7 +18,7 @@ const More: React.FC<BottomTabsScreenProps<EBottomTabScreens.SETTINGS>> = () => 
                 </Pressable>
                 <Pressable style={styles.option} onPress={() => navigationRef.current?.navigate(EStackScreens.EXCHANGES)}>
                     <View style={styles.icon}>
-                        <Image source={IMAGES.MONEY_EXCHANGE} style={{ width: '100%', height: '100%' }} resizeMode={'contain'} />
+                        <Image source={IMAGES.AMERICAN_BANK_ICON} style={{ width: '100%', height: '100%' }} resizeMode={'contain'} />
                     </View>
                     <Text style={styles.label}>Exchanges</Text>
                 </Pressable>

@@ -16,6 +16,7 @@ export type RootStackParamList = {
     [EStackScreens.FAVOURITES]: undefined;
     [EStackScreens.SEARCH]: undefined;
     [EStackScreens.CURRENCY_CONVERTER]: undefined;
+    [EStackScreens.EXCHANGES]: undefined;
     [EStackScreens.TRENDING_COINS_NFTS]: { coins: string; nfts: string; };
 };
 
