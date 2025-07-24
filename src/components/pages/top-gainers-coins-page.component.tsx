@@ -2,13 +2,13 @@ import { View, StyleSheet } from 'react-native';
 import React, { memo } from 'react';
 import { FlatList } from 'react-native-gesture-handler';
 import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
-import { MarketCoinListItem } from '$components/layouts';
+import { ListPaginationLoader, MarketCoinListItem } from '$components/layouts';
 import { useHighVolumeCoins } from '$hooks/modules';
 import EmptyListCoinsPage from './empty-list-coins-page.component';
 import { CommonListItemSkeleton } from '$components/skeleton';
 
 const TopGainersCoinsPage = () => {
-  const { loading, coins, handlePagination, handleRefresh } = useHighVolumeCoins();
+  const { loading, coins, moreLoading, handlePagination, handleRefresh } = useHighVolumeCoins();
 
   return (
     <View style={styles.container}>
@@ -32,6 +32,7 @@ const TopGainersCoinsPage = () => {
           onEndReached={handlePagination}
           onRefresh={handleRefresh}
           refreshing={false}
+          ListFooterComponent={() => (coins.length != 0 && moreLoading) ? <ListPaginationLoader /> : null}
         />
       )}
     </View>

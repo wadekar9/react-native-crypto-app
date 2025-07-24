@@ -2,14 +2,14 @@ import { View, StyleSheet } from 'react-native';
 import React, { memo } from 'react';
 import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
 import { useAllCoins } from '$hooks/modules';
-import { MarketCoinListItem } from '$components/layouts';
+import { ListPaginationLoader, MarketCoinListItem } from '$components/layouts';
 import { FlatList } from 'react-native-gesture-handler';
 import EmptyListCoinsPage from './empty-list-coins-page.component';
 import { CommonListItemSkeleton } from '$components/skeleton';
 
 const AllCoinsPage = () => {
 
-  const { loading, coins, handlePagination, handleRefresh } = useAllCoins();
+  const { loading, coins, moreLoading, handlePagination, handleRefresh } = useAllCoins();
 
   return (
     <View style={styles.container}>
@@ -33,6 +33,7 @@ const AllCoinsPage = () => {
           onEndReached={handlePagination}
           onRefresh={handleRefresh}
           refreshing={false}
+          ListFooterComponent={() => (coins.length != 0 && moreLoading) ? <ListPaginationLoader /> : null}
         />
       )}
     </View>
