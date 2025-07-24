@@ -1,4 +1,4 @@
-import { ISimpleCoinPriceApiResponse, ITrendingApiResponse } from '$types/api-types';
+import { IExchange, ISimpleCoinPriceApiResponse, ITrendingApiResponse } from '$types/api-types';
 import { IMarketCoin } from '$types/api-types/coins-module-api.types';
 import { IGlobalMarketApiResponse } from '$types/api-types/global-market-api.type';
 import { axiosInstance } from './axios-instance';
@@ -62,7 +62,7 @@ const apiService = {
     fetchExchangesRatesApi: () => makeRequest<unknown>(API_ENDPOINTS.EXCHANGE_RATES),
 
     // Fetch exchanges with pagination
-    fetchExchangesApi: (params: PaginationDto) => makeRequest<unknown>(API_ENDPOINTS.EXCHANGES, params),
+    fetchExchangesApi: (params: PaginationDto) => makeRequest<Array<IExchange>>(API_ENDPOINTS.EXCHANGES, params),
 
     // Fetch exchanges list
     fetchExchangesListApi: (params: ExchangesListDto) => makeRequest<unknown>(API_ENDPOINTS.EXCHANGE_LIST, params),
