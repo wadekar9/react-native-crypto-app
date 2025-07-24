@@ -3,4 +3,5 @@ export const IMAGES = {
     MONEY_EXCHANGE: require('./money-exchange.png'),
     CALCULATOR_ICON: require('./calculator-icon.png'),
     CRYPTOHAND_ICON: require('./crypto-hand.icon.png'),
+    AMERICAN_BANK_ICON: require('./american-bank-icon.png'),
 }

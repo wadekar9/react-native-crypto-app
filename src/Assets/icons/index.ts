@@ -27,6 +27,12 @@ import BackSpaceIcon from './BackSpaceIcon.svg';
 import MoreIcon from './more.icon.svg';
 import ChevronDown from './chevron-down.icon.svg'
 import ChevronUp from './chevron-up.icon.svg'
+import ChevronForward from './chevron-forward.icon.svg'
+import ShieldCheckmark from './shield-checkmark.icon.svg'
+import TrendingUp from './trending-up.icon.svg'
+import Podium from './podium.icon.svg'
+import LinkIcon from './link.icon.svg'
+import EmptyData from './empty-data.icon.svg'
 
 export {
     Home,
@@ -55,5 +61,11 @@ export {
     BackSpaceIcon,
     MoreIcon,
     ChevronDown,
-    ChevronUp
+    ChevronUp,
+    ChevronForward,
+    ShieldCheckmark,
+    TrendingUp,
+    Podium,
+    LinkIcon,
+    EmptyData
 }
