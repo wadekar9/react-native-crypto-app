@@ -141,7 +141,7 @@ Contributions are welcome! Please follow these steps:
 5. Open a pull request. 📬
 
 ## License 📄
-This project is open-source and available under the MIT License.
+This project is open-source and available under the [MIT License](./LICENSE).
 
 ## Acknowledgements 🙏
 - 🌐 [CoinGecko API](https://www.coingecko.com/en/api)
