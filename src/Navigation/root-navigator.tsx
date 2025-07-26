@@ -11,11 +11,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const RootNavigator: React.FC = () => {
   return (
     <Stack.Navigator
+      initialRouteName={EStackScreens.BOTTOM_NAVIGATOR}
       screenOptions={{
         headerShown: false,
         animation: 'slide_from_right'
       }}>
-      <Stack.Screen name={EStackScreens.SPLASH} component={StackRoutes.Splash} />
       <Stack.Screen name={EStackScreens.BOTTOM_NAVIGATOR} component={BottomNavigator} />
       <Stack.Screen name={EStackScreens.TRENDING_COINS_NFTS} component={StackRoutes.TrendingCoinsNfts} />
       <Stack.Screen name={EStackScreens.CURRENCY_CONVERTER} component={StackRoutes.CurrencyConverter} />
