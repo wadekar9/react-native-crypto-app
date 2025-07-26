@@ -1,6 +1,5 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import React, { memo } from 'react';
-import { FlatList } from 'react-native-gesture-handler';
 import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
 import { ListPaginationLoader, MarketCoinListItem } from '$components/layouts';
 import { useHighVolumeCoins } from '$hooks/modules';

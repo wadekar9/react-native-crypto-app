@@ -1,14 +1,13 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import React, { memo } from 'react';
-import { FlatList } from 'react-native-gesture-handler';
 import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
-import { MarketCoinListItem } from '$components/layouts';
 import { useFavouriteCoins } from '$hooks/modules';
 import EmptyListCoinsPage from './empty-list-coins-page.component';
 import { CommonListItemSkeleton } from '$components/skeleton';
+import { FavouriteCoinListItem } from '$components/layouts';
 
 const FavouritesCoinsPage = () => {
-  const { loading, coins } = useFavouriteCoins();
+  const { loading, coins, fetchFavouriteCoins } = useFavouriteCoins();
 
   return (
     <View style={styles.container}>
@@ -25,8 +24,10 @@ const FavouritesCoinsPage = () => {
           scrollEnabled={true}
           scrollEventThrottle={16}
           initialNumToRender={10}
+          onRefresh={fetchFavouriteCoins}
+          refreshing={loading}
           contentContainerStyle={styles.contentContainer}
-          renderItem={({ item, index }) => (<MarketCoinListItem key={`${index}`} element={item} />)}
+          renderItem={({ item, index }) => (<FavouriteCoinListItem element={item} key={`${index}`} />)}
           ListEmptyComponent={<EmptyListCoinsPage />}
         />
       )}

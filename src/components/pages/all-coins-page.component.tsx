@@ -1,9 +1,8 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import React, { memo } from 'react';
 import { DEVICE_WIDTH, moderateScale } from '$constants/styles.constants';
 import { useAllCoins } from '$hooks/modules';
 import { ListPaginationLoader, MarketCoinListItem } from '$components/layouts';
-import { FlatList } from 'react-native-gesture-handler';
 import EmptyListCoinsPage from './empty-list-coins-page.component';
 import { CommonListItemSkeleton } from '$components/skeleton';
 
