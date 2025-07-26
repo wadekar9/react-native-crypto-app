@@ -22,6 +22,8 @@
 		AF2A9F2E6105459C881C55DF /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB21F7101868482991717189 /* Poppins-SemiBold.ttf */; };
 		C573399BCD834CE591A7831A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD2EDD27761847219B4F69A2 /* Poppins-Medium.ttf */; };
 		D3674C4928F941C0BF308F12 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F22354B647FB479282DDBEE8 /* Poppins-Black.ttf */; };
+		F6FC63B4FD084DE8B295A97B /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50DE4450B0B4641851F4719 /* BootSplash.storyboard */; };
+		DF12D9842ED64ECDB79FD6B3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6709D45D949AC8B29D67D /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		F22354B647FB479282DDBEE8 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
 		FBD19860ACAE41758544E6F5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		FD2EDD27761847219B4F69A2 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		F50DE4450B0B4641851F4719 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "cryptoapp/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0AB6709D45D949AC8B29D67D /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "cryptoapp/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				37B61E60CAD7E25A3B7FBA57 /* PrivacyInfo.xcprivacy */,
+				F50DE4450B0B4641851F4719 /* BootSplash.storyboard */,
+				0AB6709D45D949AC8B29D67D /* Colors.xcassets */,
 			);
 			name = cryptoapp;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 				0FCEAB0E5B1C4D73BFD36EAC /* Poppins-Regular.ttf in Resources */,
 				AF2A9F2E6105459C881C55DF /* Poppins-SemiBold.ttf in Resources */,
 				8F1396338C3A4A2F951946CA /* Poppins-Thin.ttf in Resources */,
+				F6FC63B4FD084DE8B295A97B /* BootSplash.storyboard in Resources */,
+				DF12D9842ED64ECDB79FD6B3 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
