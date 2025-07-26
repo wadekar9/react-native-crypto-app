@@ -1,9 +1,9 @@
 import React, { memo, useRef } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
-import { EStackScreens } from '$constants/screens.constants';
 import { IMarketCoin } from '$types/api-types';
-import { navigationRef } from '$types/navigation';
+import { CoinDetailsModal } from '$components/modals';
+import { formatNumber } from '$utils/helpers';
 
 interface MarketCoinListItemProps {
     element: IMarketCoin;
@@ -22,30 +22,34 @@ const MarketCoinListItem: React.FC<MarketCoinListItemProps> = ({
             onPress={() => modalSheetRef.current?.open(element.id)}
             accessibilityLabel={`View details for ${element.name}`}
         >
-            <View style={styles.iconWrapper}>
-                <Image
-                    source={{ uri: element.image }}
-                    style={styles.icon}
-                    resizeMode="cover"
-                    accessibilityLabel={`${element.name} icon`}
-                />
-            </View>
+            <>
+                <View style={styles.iconWrapper}>
+                    <Image
+                        source={{ uri: element.image }}
+                        style={styles.icon}
+                        resizeMode="cover"
+                        accessibilityLabel={`${element.name} icon`}
+                    />
+                </View>
 
-            <View style={{ flexDirection: 'row', flexGrow: 1, flex: 1 }}>
-                <View style={styles.content}>
-                    <View style={styles.info}>
-                        <Text numberOfLines={1} style={styles.labelStyle}>{element.name}</Text>
-                        <Text numberOfLines={1} style={styles.shortLabelStyle}>{element.symbol}</Text>
+                <View style={{ flexDirection: 'row', flexGrow: 1, flex: 1 }}>
+                    <View style={styles.content}>
+                        <View style={styles.info}>
+                            <Text numberOfLines={1} style={styles.labelStyle}>{element.name}</Text>
+                            <Text numberOfLines={1} style={styles.shortLabelStyle}>{element.symbol}</Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.chartPriceWrapper}>
+                        <View style={styles.price}>
+                            <Text numberOfLines={1} style={styles.amountStyle}>{formatNumber(element.current_price, { currency: 'USD', style: 'currency' })}</Text>
+                            <Text numberOfLines={1} style={styles.marketCap}>{formatNumber(element.total_volume, { currency: 'USD', style: 'currency' })}</Text>
+                        </View>
                     </View>
                 </View>
 
-                <View style={styles.chartPriceWrapper}>
-                    <View style={styles.price}>
-                        <Text numberOfLines={1} style={styles.amountStyle}>${element.current_price}</Text>
-                        <Text numberOfLines={1} style={styles.marketCap}>{element.total_volume}</Text>
-                    </View>
-                </View>
-            </View>
+                <CoinDetailsModal ref={modalSheetRef} />
+            </>
         </TouchableOpacity>
     );
 };
@@ -120,7 +124,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         gap: moderateScale(10),
-        flex: 0.4
+        flex: 1
     }
 });
 

@@ -2,10 +2,9 @@ import React, { memo, useRef } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
-import { EStackScreens } from '$constants/screens.constants';
-import { ITrendingCoin } from '$types/api-types';
-import { navigationRef } from '$types/navigation';
+import { ITrendingCoin } from '$types/api-types';;
 import { CoinDetailsModal } from '$components/modals';
+import { formatNumber } from '$utils/helpers';
 
 interface CoinListItemProps {
   element: ITrendingCoin;
@@ -57,7 +56,7 @@ const CoinListItem: React.FC<CoinListItemProps> = ({
             </View>
 
             <View style={styles.price}>
-              <Text style={styles.amountStyle}>${price}</Text>
+              <Text style={styles.amountStyle}>{formatNumber(price, { currency: 'USD', style: 'currency' })}</Text>
               <Text style={styles.marketCap}>
                 #{element.item.market_cap_rank}
               </Text>

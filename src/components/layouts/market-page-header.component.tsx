@@ -6,6 +6,7 @@ import { navigationRef } from '$types/navigation';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
 import { EStackScreens } from '$constants/screens.constants';
 import { IGlobalMarketData } from '$types/api-types';
+import { formatNumber } from '$utils/helpers';
 
 interface MarketPageHeaderProps {
     marketDetails: IGlobalMarketData | null;
@@ -34,12 +35,12 @@ const MarketPageHeader: React.FC<MarketPageHeaderProps> = ({ marketDetails }) =>
                     <View style={styles.metrics}>
                         <View style={styles.metric}>
                             <Text style={styles.metricText}>
-                                Coins:&nbsp;<Text style={styles.metricValue}>{marketDetails?.active_cryptocurrencies || '-'}</Text>
+                                Coins:&nbsp;<Text style={styles.metricValue}>{marketDetails?.active_cryptocurrencies ? formatNumber(marketDetails?.active_cryptocurrencies, { currency: 'USD', style: 'currency' }) : '-'}</Text>
                             </Text>
                         </View>
                         <View style={styles.metric}>
                             <Text style={styles.metricText}>
-                                Exchanges:&nbsp;<Text style={styles.metricValue}>{marketDetails?.markets || '-'}</Text>
+                                Exchanges:&nbsp;<Text style={styles.metricValue}>{marketDetails?.markets ? formatNumber(marketDetails?.markets, { currency: 'USD', style: 'currency' }) : '-'}</Text>
                             </Text>
                         </View>
                         <View style={styles.metric}>
