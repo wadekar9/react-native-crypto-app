@@ -3,9 +3,6 @@ import { EColors, EFonts, moderateScale } from '$constants/styles.constants';
 import { fetch } from '@react-native-community/netinfo';
 import { EMessages } from '$constants/messages.constants';
 import { Platform, StatusBar } from 'react-native';
-import { getStorageValue, setStorageValue } from './storage';
-import { EStorageKeys } from '$constants/storage.constants';
-import { ICoinDetailsDto } from './dto';
 
 export function showFlashMessage(props: MessageOptions) {
 
@@ -83,36 +80,6 @@ export const convertToQueryParams = (params: Record<string, any>) => {
     }
     return keyValuePairs.length > 0 ? `?${keyValuePairs.join('&')}` : '';
 }
-
-export const handleAddCoinToFavourite = async (
-    coins: ICoinDetailsDto[],
-    action: 'add' | 'delete' = 'add'
-): Promise<void> => {
-    try {
-        const response = await getStorageValue(EStorageKeys.FAVOURITES_COINS);
-        let prevCoins: ICoinDetailsDto[] = [];
-
-        if (response) {
-            prevCoins = JSON.parse(response) as ICoinDetailsDto[];
-        }
-
-        if (!Array.isArray(prevCoins)) throw new Error(`prevCoins is not an array. Typeof prevCoins : ${typeof prevCoins}`);
-
-        let updatedCoins: ICoinDetailsDto[] = [];
-
-        if (action === 'add') {
-            updatedCoins = prevCoins.concat(coins);
-        } else if (action === 'delete') {
-            const removeIds = coins.map(coin => coin.id);
-            updatedCoins = prevCoins.filter(coin => !removeIds.includes(coin.id));
-        }
-
-        await setStorageValue(EStorageKeys.FAVOURITES_COINS, updatedCoins);
-    } catch (error) {
-        console.error("ERROR WHILE UPDATING FAVOURITE COINS", error);
-    }
-};
-
 
 export const formatNumber = (
     value: number | string,

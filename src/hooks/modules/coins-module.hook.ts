@@ -1,9 +1,8 @@
-import { EStorageKeys } from "$constants/storage.constants";
 import { IMarketCoin } from "$types/api-types/coins-module-api.types";
 import apiService from "$utils/api";
 import { ICoinDetailsDto } from "$utils/dto";
+import { favouriteCoinsManager } from "$utils/favourite-coins-manager";
 import { showErrorFlashMessage } from "$utils/helpers";
-import { getStorageValue } from "$utils/storage";
 import { useCallback, useEffect, useRef, useState } from "react"
 
 export const useAllCoins = () => {
@@ -151,27 +150,19 @@ export const useLowVolumeCoins = () => {
 
 export const useFavouriteCoins = () => {
 
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
     const [coins, setCoins] = useState<ICoinDetailsDto[]>([]);
 
     const fetchFavouriteCoins = useCallback(async () => {
         try {
             setLoading(true);
-            const response = await getStorageValue(EStorageKeys.FAVOURITES_COINS);
-            if (response) {
-                const result = JSON.parse(response) as Array<ICoinDetailsDto>;
-                if (Array.isArray(result)) {
-                    setCoins(result);
-                } else {
-                    setCoins([]);
-                }
-            }
+            setCoins(favouriteCoinsManager.getFavouriteCoins());
         } catch (error) {
             showErrorFlashMessage(error);
         } finally {
             setLoading(false);
         }
-    }, [])
+    }, [favouriteCoinsManager])
 
     useEffect(() => {
         fetchFavouriteCoins();

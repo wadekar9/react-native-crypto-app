@@ -4,7 +4,7 @@ import { DEVICE_HEIGHT, DEVICE_WIDTH, EColors, EFonts, EFontSize, moderateScale 
 import { CHART_TIMELINES } from '$constants/app.constants';
 import { ICoinDetailsDto } from '$utils/dto';
 import apiService from '$utils/api';
-import { handleAddCoinToFavourite } from '$utils/helpers';
+import { favouriteCoinsManager } from '$utils/favourite-coins-manager';
 import { CoinDetailsModalSkeleton } from '$components/skeleton';
 import { CoinDetailsChartSection, CoinDetailsHeaderSection } from '$components/layouts';
 
@@ -122,19 +122,24 @@ const CoinDetailsModal = forwardRef<CoinDetailsModalRefProps, any>((_, ref) => {
 
     const handleToggleFavourite = useCallback(() => {
         if (details) {
-            handleAddCoinToFavourite([details], isFavourite ? 'delete' : 'add');
+            if (isFavourite) {
+                favouriteCoinsManager.deleteCoinsFromFavourites([details.id]);
+            } else {
+                favouriteCoinsManager.addCoinsToFavourites([details]);
+            }
             setIsFavourite((prev) => !prev);
         }
-    }, [details, isFavourite]);
+    }, [details, isFavourite, favouriteCoinsManager]);
 
     useImperativeHandle(ref, () => ({
         open: (id: string) => {
             coinID.current = id;
             fetchCoinDetails(id);
             setVisible(true);
+            setIsFavourite(favouriteCoinsManager.isCoinFavourite(id));
         },
         close: handleClose,
-    }), [fetchCoinDetails, handleClose]);
+    }), [fetchCoinDetails, handleClose, favouriteCoinsManager]);
 
     const ContentComponent = useMemo(
         () =>
