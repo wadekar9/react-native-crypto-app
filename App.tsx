@@ -5,19 +5,20 @@ import RootNavigator from '$navigation/root-navigator';
 import AppThemeProvider from '$context/app-theme.context';
 import FlashMessage from 'react-native-flash-message';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const App: React.FC = () => {
   return (
     <AppThemeProvider>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <NavigationContainer
-          ref={navigationRef}
-        >
-          <RootNavigator />
-        </NavigationContainer>
+      <SafeAreaProvider style={{ flex: 1 }}>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <NavigationContainer ref={navigationRef}>
+            <RootNavigator />
+          </NavigationContainer>
 
-        <FlashMessage position="top" />
-      </GestureHandlerRootView>
+          <FlashMessage position="top" />
+        </GestureHandlerRootView>
+      </SafeAreaProvider>
     </AppThemeProvider>
   )
 }

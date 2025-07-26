@@ -17,7 +17,7 @@ const BackHeader: React.FC<BackHeaderProps> = ({ headerName }) => {
                 onPress={() => navigationRef.current?.goBack()}
                 accessibilityLabel="Go back"
             >
-                <LeftChevron height={18} width={18} />
+                <LeftChevron fill={EColors.WHITE} height={18} width={18} />
             </TouchableOpacity>
             <Text style={styles.headerText}>{headerName}</Text>
             <View style={styles.placeholder} />
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 16,
         paddingVertical: 12,
-        backgroundColor: '#fff',
+        backgroundColor: EColors.PRIMARY_COLOR,
         borderBottomWidth: 1,
         borderBottomColor: '#e0e0e0',
     },
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: EFontSize['2XL'],
         fontFamily: EFonts.SEMI_BOLD,
-        color: EColors.BLACK,
+        color: EColors.WHITE,
         textAlign: 'center',
         flex: 1,
     },

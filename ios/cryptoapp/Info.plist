@@ -46,7 +46,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
+	<false/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Black.ttf</string>
