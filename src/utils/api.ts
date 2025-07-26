@@ -13,7 +13,7 @@ import {
     ExchangesListDto,
     ExchangesTikcersDto,
     ICoinChartData,
-    ICoinDetails,
+    ICoinDetailsDto,
     ICoinPriceSimpleDto,
     PaginationDto
 } from './dto';
@@ -91,7 +91,7 @@ const apiService = {
     fetchCoinTickersApi: (id: string, params: CoinTickersDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}/tickers`, params),
 
     // Fetch single coin data
-    fetchCoinDataApi: (id: string, params: CoinDataDto) => makeRequest<ICoinDetails>(`${API_ENDPOINTS.COINS}/${id}`, params),
+    fetchCoinDataApi: (id: string, params: CoinDataDto) => makeRequest<ICoinDetailsDto>(`${API_ENDPOINTS.COINS}/${id}`, params),
 
     // Fetch trending coins and NFTs
     fetchTrendingDataApi: () => makeRequest<ITrendingApiResponse>(API_ENDPOINTS.TRENDING),

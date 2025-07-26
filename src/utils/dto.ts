@@ -77,7 +77,7 @@ export interface ICoinChartData {
     readonly total_volumes: Array<number[]>;
 }
 
-export interface ICoinDetails {
+export interface ICoinDetailsDto {
     readonly id: string;
     readonly symbol: string;
     readonly name: string;
