@@ -33,6 +33,9 @@ import TrendingUp from './trending-up.icon.svg'
 import Podium from './podium.icon.svg'
 import LinkIcon from './link.icon.svg'
 import EmptyData from './empty-data.icon.svg'
+import CloseCircle from './close-circle.icon.svg'
+import HeartFill from './heart-fill.icon.svg'
+import HeartOutline from './heart-outline.icon.svg'
 
 export {
     Home,
@@ -67,5 +70,8 @@ export {
     TrendingUp,
     Podium,
     LinkIcon,
-    EmptyData
+    EmptyData,
+    CloseCircle,
+    HeartFill,
+    HeartOutline
 }

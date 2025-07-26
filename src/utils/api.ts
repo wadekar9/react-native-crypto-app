@@ -12,6 +12,8 @@ import {
     CoinTickersDto,
     ExchangesListDto,
     ExchangesTikcersDto,
+    ICoinChartData,
+    ICoinDetails,
     ICoinPriceSimpleDto,
     PaginationDto
 } from './dto';
@@ -80,16 +82,16 @@ const apiService = {
     fetchCoinHistoricalDataApi: (id: string, params: CoinsHistoricalDataDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}/history`, params),
 
     // Fetch coin market chart
-    fetchCoinMarketChartApi: (id: string, params: CoinsMarketChartDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}/market_chart`, params),
+    fetchCoinMarketChartApi: (id: string, params: CoinsMarketChartDto) => makeRequest<ICoinChartData>(`${API_ENDPOINTS.COINS}/${id}/market_chart`, params),
 
     // Fetch coin market chart within range
-    fetchCoinMarketChartWithinRangeApi: (id: string, params: CoinsMarketChartRangeDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}/market_chart/range`, params),
+    fetchCoinMarketChartWithinRangeApi: (id: string, params: CoinsMarketChartRangeDto) => makeRequest<ICoinChartData>(`${API_ENDPOINTS.COINS}/${id}/market_chart/range`, params),
 
     // Fetch coin tickers
     fetchCoinTickersApi: (id: string, params: CoinTickersDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}/tickers`, params),
 
     // Fetch single coin data
-    fetchCoinDataApi: (id: string, params: CoinDataDto) => makeRequest<unknown>(`${API_ENDPOINTS.COINS}/${id}`, params),
+    fetchCoinDataApi: (id: string, params: CoinDataDto) => makeRequest<ICoinDetails>(`${API_ENDPOINTS.COINS}/${id}`, params),
 
     // Fetch trending coins and NFTs
     fetchTrendingDataApi: () => makeRequest<ITrendingApiResponse>(API_ENDPOINTS.TRENDING),

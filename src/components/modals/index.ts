@@ -1,0 +1,1 @@
+export { default as CoinDetailsModal } from './coin-details-modal.component'
