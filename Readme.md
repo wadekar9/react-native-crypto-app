@@ -46,11 +46,10 @@ CryptoX is a mobile application built with React Native that allows users to tra
 - 🖼️ **Screenshots**:
 
 <p float="left">
-  <img src="https://github.com/user-attachments/assets/d4b8de86-b065-4f24-ad15-590fb7ec165b" width="180" />
-  <img src="https://github.com/user-attachments/assets/1601f874-149f-4a99-bc99-01524b80410f" width="180" />
-  <img src="https://github.com/user-attachments/assets/c44549d6-4dd7-418b-b068-a9f683e005a3" width="180" />
-  <img src="https://github.com/user-attachments/assets/695f97c9-cc9f-4913-9ff2-2083beca5862" width="180" />
-  <img src="https://github.com/user-attachments/assets/d5e356d1-2bd7-4d7c-9f19-c2360dfcbdf4" width="180" />
+  <img src="https://github.com/user-attachments/assets/1601f874-149f-4a99-bc99-01524b80410f" width="200" />
+  <img src="https://github.com/user-attachments/assets/c44549d6-4dd7-418b-b068-a9f683e005a3" width="200" />
+  <img src="https://github.com/user-attachments/assets/695f97c9-cc9f-4913-9ff2-2083beca5862" width="200" />
+  <img src="https://github.com/user-attachments/assets/d5e356d1-2bd7-4d7c-9f19-c2360dfcbdf4" width="200" />
 </p>
 
 ## Installation ⚙️
