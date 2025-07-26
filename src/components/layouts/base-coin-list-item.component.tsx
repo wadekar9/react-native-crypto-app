@@ -1,10 +1,11 @@
-import React, { memo } from 'react';
+import React, { memo, useRef } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
 import { EStackScreens } from '$constants/screens.constants';
 import { ITrendingCoin } from '$types/api-types';
 import { navigationRef } from '$types/navigation';
+import { CoinDetailsModal } from '$components/modals';
 
 interface CoinListItemProps {
   element: ITrendingCoin;
@@ -15,52 +16,57 @@ const CoinListItem: React.FC<CoinListItemProps> = ({
 }) => {
 
   const price = element.item.data.price >= 1 ? element.item.data.price.toFixed(2) : element.item.data.price.toFixed(5);
+  const modalSheetRef = useRef<any>(null)
 
   return (
     <TouchableOpacity
       style={styles.container}
       activeOpacity={0.5}
-      onPress={() => navigationRef.current?.navigate(EStackScreens.COIN_DETAILS)}
+      onPress={() => modalSheetRef.current?.open(element.item.id)}
       accessibilityLabel={`View details for ${element.item.name}`}
     >
-      <View style={styles.iconWrapper}>
-        <Image
-          source={{ uri: element.item.large }}
-          style={styles.icon}
-          resizeMode="cover"
-          accessibilityLabel={`${element.item.name} icon`}
-        />
-      </View>
+      <>
+        <View style={styles.iconWrapper}>
+          <Image
+            source={{ uri: element.item.large }}
+            style={styles.icon}
+            resizeMode="cover"
+            accessibilityLabel={`${element.item.name} icon`}
+          />
+        </View>
 
-      <View style={{ flexDirection: 'row', flexGrow: 1, flex: 1 }}>
-        <View style={styles.content}>
-          <View style={styles.info}>
-            <Text numberOfLines={1} style={styles.labelStyle}>
-              {element.item.name}
-            </Text>
-            <Text numberOfLines={1} style={styles.shortLabelStyle}>
-              {element.item.symbol}
-            </Text>
+        <View style={{ flexDirection: 'row', flexGrow: 1, flex: 1 }}>
+          <View style={styles.content}>
+            <View style={styles.info}>
+              <Text numberOfLines={1} style={styles.labelStyle}>
+                {element.item.name}
+              </Text>
+              <Text numberOfLines={1} style={styles.shortLabelStyle}>
+                {element.item.symbol}
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.chartPriceWrapper}>
+            <View style={styles.sparkLine}>
+              <SvgUri
+                width={moderateScale(80)}
+                height={moderateScale(40)}
+                uri={element.item.data.sparkline}
+              />
+            </View>
+
+            <View style={styles.price}>
+              <Text style={styles.amountStyle}>${price}</Text>
+              <Text style={styles.marketCap}>
+                #{element.item.market_cap_rank}
+              </Text>
+            </View>
           </View>
         </View>
 
-        <View style={styles.chartPriceWrapper}>
-          <View style={styles.sparkLine}>
-            <SvgUri
-              width={moderateScale(80)}
-              height={moderateScale(40)}
-              uri={element.item.data.sparkline}
-            />
-          </View>
-
-          <View style={styles.price}>
-            <Text style={styles.amountStyle}>${price}</Text>
-            <Text style={styles.marketCap}>
-              #{element.item.market_cap_rank}
-            </Text>
-          </View>
-        </View>
-      </View>
+        <CoinDetailsModal ref={modalSheetRef} />
+      </>
     </TouchableOpacity>
   );
 };

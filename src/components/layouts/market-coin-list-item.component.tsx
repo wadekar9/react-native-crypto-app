@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useRef } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
 import { EStackScreens } from '$constants/screens.constants';
@@ -13,11 +13,13 @@ const MarketCoinListItem: React.FC<MarketCoinListItemProps> = ({
     element
 }) => {
 
+    const modalSheetRef = useRef<any>(null)
+
     return (
         <TouchableOpacity
             style={styles.container}
             activeOpacity={0.5}
-            onPress={() => navigationRef.current?.navigate(EStackScreens.COIN_DETAILS)}
+            onPress={() => modalSheetRef.current?.open(element.id)}
             accessibilityLabel={`View details for ${element.name}`}
         >
             <View style={styles.iconWrapper}>

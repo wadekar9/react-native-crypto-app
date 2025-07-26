@@ -1,10 +1,8 @@
 import React, { memo } from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 import { EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
-import { EStackScreens } from '$constants/screens.constants';
-import { ITrendingCoin, ITrendingNFT } from '$types/api-types';
-import { navigationRef } from '$types/navigation';
+import { ITrendingNFT } from '$types/api-types';
 
 interface NFTListItemProps {
   element: ITrendingNFT;
@@ -15,12 +13,7 @@ const NFTListItem: React.FC<NFTListItemProps> = ({
 }) => {
 
   return (
-    <TouchableOpacity
-      style={styles.container}
-      activeOpacity={0.5}
-      onPress={() => navigationRef.current?.navigate(EStackScreens.COIN_DETAILS)}
-      accessibilityLabel={`View details for ${element.name}`}
-    >
+    <View style={styles.container} accessibilityLabel={`View details for ${element.name}`}>
       <View style={styles.iconWrapper}>
         <Image
           source={{ uri: element.thumb }}
@@ -57,7 +50,7 @@ const NFTListItem: React.FC<NFTListItemProps> = ({
           </View>
         </View>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 
