@@ -1,79 +1,151 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# CryptoX - Cryptocurrency Tracker App 🚀
 
-# Getting Started
+CryptoX is a mobile application built with React Native that allows users to track cryptocurrency prices, view detailed charts, and stay updated with market trends using the CoinGecko API. 📈
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
+- [Features](#features) ✨
+- [Tech Stack](#tech-stack) 🛠️
+- [App Demo](#app-demo) 📱
+- [Installation](#installation) ⚙️
+- [Major Dependencies](#major-dependencies) 📦
+- [Environment Variables](#environment-variables) 🔧
+- [Design](#design) 🎨
+- [To-Do (Optional Features)](#to-do-optional-features) ✅
+- [Contributing](#contributing) 🤝
+- [License](#license) 📄
+- [Acknowledgements](#acknowledgements) 🙏
 
-## Step 1: Start the Metro Server
+## Features ✨
+- Real-time cryptocurrency price tracking ⏱️
+- Interactive price charts with React Native Wagmi Charts 📊
+- Smooth animations using React Native Reanimated 🎥
+- Custom app splash screen with React Native Bootsplash 🌟
+- Navigation between screens using React Navigation 🧭
+- SVG icon support with React Native SVG 🖼️
+- Type-safe development with TypeScript 🔍
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Tech Stack 🛠️
+- **React Native**: Framework for building the mobile app 📱
+- **TypeScript**: For type-safe JavaScript development 🛡️
+- **React Navigation**: For navigation and routing 🧭
+- **Axios**: For making API requests to CoinGecko 🌐
+- **React Native Reanimated**: For smooth animations 🎞️
+- **React Native Wagmi Charts**: For rendering cryptocurrency charts 📈
+- **React Native Bootsplash**: For custom splash screen 🚀
+- **React Native SVG**: For rendering SVG icons 🖼️
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## App Demo 📱
 
+- 🎥 **App Demo Video**:
+
+<video src="https://github.com/user-attachments/assets/934e6f83-cc46-415d-8cf5-ebcc1ff9e270" controls width="100%" autoplay loop muted>
+  Your browser does not support the video tag.
+</video>
+
+
+- 🖼️ **Screenshots**:
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/d4b8de86-b065-4f24-ad15-590fb7ec165b" width="180" />
+  <img src="https://github.com/user-attachments/assets/1601f874-149f-4a99-bc99-01524b80410f" width="180" />
+  <img src="https://github.com/user-attachments/assets/c44549d6-4dd7-418b-b068-a9f683e005a3" width="180" />
+  <img src="https://github.com/user-attachments/assets/695f97c9-cc9f-4913-9ff2-2083beca5862" width="180" />
+  <img src="https://github.com/user-attachments/assets/d5e356d1-2bd7-4d7c-9f19-c2360dfcbdf4" width="180" />
+</p>
+
+## Installation ⚙️
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/cryptox.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd cryptox
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   Or with Yarn:
+   ```bash
+   yarn install
+   ```
+4. Set up environment variables (see [Environment Variables](#environment-variables)). 🔧
+5. Run the app:
+   ```bash
+   npm run start
+   ```
+   Or with Yarn:
+   ```bash
+   yarn start
+   ```
+   For Android:
+   ```bash
+   npm run android
+   ```
+   Or with Yarn:
+   ```bash
+   yarn android
+   ```
+   For iOS:
+   ```bash
+   npm run ios
+   ```
+   Or with Yarn:
+   ```bash
+   yarn ios
+   ```
+
+## Major Dependencies 📦
+Install the major dependencies using npm:
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+npm install @react-navigation/native axios react-native-reanimated react-native-wagmi-charts react-native-svg react-native-bootsplash
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+Or with Yarn:
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+yarn add @react-navigation/native axios react-native-reanimated react-native-wagmi-charts react-native-svg react-native-bootsplash
 ```
 
-### For iOS
+## Environment Variables 🔧
+Create a `.env` file in the root directory and add the following variables:
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```env
+API_KEY=YOUR_COINGECKO_API_KEY
+API_URL=https://api.coingecko.com/api/v3
+PRO_API_URL=https://pro-api.coingecko.com/api/v3
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+- **API_KEY**: Required only when using `PRO_API_URL`. Optional for public `API_URL`. 🔑
+- **API_URL**: Public CoinGecko API endpoint (no API key required). 🌐
+- **PRO_API_URL**: Pro CoinGecko API endpoint (requires API key). 🔒
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Design 🎨
+The app's UI is inspired by the Figma community design:  
+[View Figma Design](https://www.figma.com/community/file/987218729121549341)
 
-## Step 3: Modifying your App
+The app icon was generated using:  
+[Icon Kitchen](https://icon.kitchen/) 🖼️
 
-Now that you have successfully run the app, let's modify it.
+## To-Do (Optional Features) ✅
+- Add dark/light theme toggle 🌙☀️
+- Add portfolio tracking 💼
+- Push notifications for price alerts 🔔
+- Language/localization support 🌍
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Contributing 🤝
+Contributions are welcome! Please follow these steps:
+1. Fork the repository. 🍴
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`). ✅
+4. Push to the branch (`git push origin feature/your-feature`). 🚀
+5. Open a pull request. 📬
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## License 📄
+This project is open-source and available under the MIT License.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Acknowledgements 🙏
+- 🌐 [CoinGecko API](https://www.coingecko.com/en/api)
+- 📱 [React Native](https://reactnative.dev/)
+- 🎨 [Figma Community](https://www.figma.com/community)
+- 📈 [Wagmi Charts](https://github.com/wagmi-dev/wagmi-charts)
