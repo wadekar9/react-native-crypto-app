@@ -24,7 +24,6 @@
     "axios": "^1.10.0",
     "react": "18.3.1",
     "react-native": "0.76.9",
-    "react-native-actions-sheet": "^0.9.7",
     "react-native-bootsplash": "^6.3.10",
     "react-native-config": "^1.5.5",
     "react-native-element-dropdown": "^2.12.4",
@@ -37,7 +36,6 @@
     "react-native-screens": "^4.11.1",
     "react-native-skeleton-placeholder": "^5.2.4",
     "react-native-svg": "15.11.2",
-    "react-native-svg-charts": "^5.4.0",
     "react-native-wagmi-charts": "^2.7.1"
   },
   "devDependencies": {
@@ -52,7 +50,6 @@
     "@react-native/metro-config": "0.76.9",
     "@react-native/typescript-config": "0.76.9",
     "@types/react": "^18.2.6",
-    "@types/react-native-svg-charts": "^5.0.16",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
     "babel-plugin-module-resolver": "^5.0.0",
