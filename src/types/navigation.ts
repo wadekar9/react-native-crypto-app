@@ -12,7 +12,6 @@ import { EBottomTabScreens, EStackScreens } from '$constants/screens.constants';
 export type RootStackParamList = {
     [EStackScreens.SPLASH]: undefined;
     [EStackScreens.BOTTOM_NAVIGATOR]: undefined;
-    [EStackScreens.COIN_DETAILS]: undefined;
     [EStackScreens.FAVOURITES]: undefined;
     [EStackScreens.SEARCH]: undefined;
     [EStackScreens.CURRENCY_CONVERTER]: undefined;
