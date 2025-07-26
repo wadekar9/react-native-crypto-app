@@ -1,8 +1,6 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet, Modal, Pressable } from 'react-native';
 import React, { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react'
-import { EStackScreens } from '$constants/screens.constants'
-import { RootStackScreenProps } from '$types/navigation'
-import { BaseLayout, IconButton } from '$components/common'
+import { IconButton } from '$components/common'
 import { CloseCircle, HeartFill, HeartOutline } from '$assets/icons';
 import { DEVICE_HEIGHT, DEVICE_WIDTH, EColors, EFonts, EFontSize, moderateScale } from '$constants/styles.constants';
 import { LineChart } from 'react-native-wagmi-charts';
@@ -11,6 +9,8 @@ import { CHART_TIMELINES } from '$constants/app.constants';
 import { ICoinChartData, ICoinDetails } from '$utils/dto';
 import apiService from '$utils/api';
 import { formatNumber } from '$utils/helpers';
+import { CoinDetailsModalSkeleton } from '$components/skeleton';
+import { FadeAnimationContainerModal } from '.';
 
 interface CoinDetailsModalProps { }
 
@@ -23,8 +23,8 @@ const CoinDetailsModal = forwardRef<CoinDetailsModalRefProps, CoinDetailsModalPr
 
     const coinID = useRef<string | undefined>(undefined);
     const timeoutListener = useRef<ReturnType<typeof setTimeout> | null>(null);
-    const apiListener = useRef<any>(null);
 
+    const [isChartLoading, setIsChartLoading] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(false);
     const [details, setDetails] = useState<ICoinDetails | null>(null);
     const [chartData, setChartData] = useState<Array<{ value: number, timestamp: number }>>([]);
@@ -42,12 +42,15 @@ const CoinDetailsModal = forwardRef<CoinDetailsModalRefProps, CoinDetailsModalPr
         timeoutListener.current = setTimeout(() => {
             try {
                 if (!coinID.current) return;
+                setIsChartLoading(true)
                 apiService.fetchCoinMarketChartApi(coinID.current, { vs_currency: 'usd', days: timline.toString() })
                     .then((response) => {
                         setChartData(response.prices.map((e) => ({ timestamp: e[0], value: e[1] })));
+                        setIsChartLoading(false)
                     })
             } catch (error) {
                 console.error("ERROR", error);
+                setIsChartLoading(false);
             }
         }, 1000)
     }
@@ -165,6 +168,8 @@ const CoinDetailsModal = forwardRef<CoinDetailsModalRefProps, CoinDetailsModalPr
                                 />
                             </LineChart.Provider>
                         )}
+
+                        {isChartLoading && <FadeAnimationContainerModal containerStyle={styles.fadeAnimationContainer} />}
                     </View>
 
 
@@ -203,6 +208,7 @@ const CoinDetailsModal = forwardRef<CoinDetailsModalRefProps, CoinDetailsModalPr
             >
                 <View style={styles.wrapper}>
                     <View style={styles.container}>
+                        {!(details && chartData) && (<CoinDetailsModalSkeleton onRequestClose={() => handleClose()} />)}
                         {(details && chartData) && <ContentComponent key={'coin-details-key'} />}
                     </View>
                 </View>
@@ -297,5 +303,10 @@ const styles = StyleSheet.create({
         fontSize: EFontSize.SM,
         color: EColors.GREY,
         textAlign: 'center'
+    },
+    fadeAnimationContainer: {
+        width: DEVICE_WIDTH,
+        height: '100%',
+        position: 'absolute'
     }
 })
