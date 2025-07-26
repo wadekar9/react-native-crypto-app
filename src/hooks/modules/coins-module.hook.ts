@@ -1,6 +1,7 @@
 import { EStorageKeys } from "$constants/storage.constants";
 import { IMarketCoin } from "$types/api-types/coins-module-api.types";
 import apiService from "$utils/api";
+import { ICoinDetailsDto } from "$utils/dto";
 import { showErrorFlashMessage } from "$utils/helpers";
 import { getStorageValue } from "$utils/storage";
 import { useCallback, useEffect, useRef, useState } from "react"
@@ -32,7 +33,6 @@ export const useAllCoins = () => {
     }, [])
 
     const handleRefresh = useCallback(() => {
-        setCoins([]);
         setMoreLoading(true);
         fetchAllCoins(1)
         page.current = 1;
@@ -81,7 +81,6 @@ export const useHighVolumeCoins = () => {
     }, [])
 
     const handleRefresh = useCallback(() => {
-        setCoins([]);
         setMoreLoading(true);
         fetchHighVolumeCoins(1)
         page.current = 1;
@@ -130,7 +129,6 @@ export const useLowVolumeCoins = () => {
     }, [])
 
     const handleRefresh = useCallback(() => {
-        setCoins([]);
         setMoreLoading(true);
         fetchLowVolumeCoins(1);
         page.current = 1;
@@ -154,27 +152,31 @@ export const useLowVolumeCoins = () => {
 export const useFavouriteCoins = () => {
 
     const [loading, setLoading] = useState<boolean>(false);
-    const [coins, setCoins] = useState<IMarketCoin[]>([]);
+    const [coins, setCoins] = useState<ICoinDetailsDto[]>([]);
 
-    async function fetchFavouriteCoins() {
+    const fetchFavouriteCoins = useCallback(async () => {
         try {
             setLoading(true);
             const response = await getStorageValue(EStorageKeys.FAVOURITES_COINS);
             if (response) {
-                const result = JSON.parse(response);
-                setCoins(result);
+                const result = JSON.parse(response) as Array<ICoinDetailsDto>;
+                if (Array.isArray(result)) {
+                    setCoins(result);
+                } else {
+                    setCoins([]);
+                }
             }
         } catch (error) {
             showErrorFlashMessage(error);
         } finally {
             setLoading(false);
         }
-    }
+    }, [])
 
     useEffect(() => {
         fetchFavouriteCoins();
     }, [])
 
-    return { loading, coins };
+    return { loading, coins, fetchFavouriteCoins };
 
 }

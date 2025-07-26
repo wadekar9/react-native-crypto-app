@@ -36,12 +36,13 @@ const CurrencyConverter = () => {
     }
 
     const onReset = useCallback(() => {
+        if (isLoading) return;
         setAmount('')
         setSelectedCoin('')
         setSelectedCurrency('')
         setConvertedAmount('')
         setError('')
-    }, [])
+    }, [isLoading])
 
     const handleCalculate = useCallback(async () => {
         if (!amount || !selectedCoin || !selectedCurrency) return
@@ -92,6 +93,7 @@ const CurrencyConverter = () => {
             <View style={styles.container}>
                 <ScrollView contentContainerStyle={styles.contentContainer} scrollEventThrottle={16}>
                     <BaseTextInput
+                        LeftAccessory={<Text style={styles.prefix}>$</Text>}
                         value={amount}
                         onChangeText={setAmount}
                         label="Amount"

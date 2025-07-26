@@ -1,4 +1,4 @@
-import { EColors, EFonts, moderateScale } from "$constants/styles.constants";
+import { EColors, EFonts, EFontSize, moderateScale } from "$constants/styles.constants";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -56,4 +56,9 @@ export const styles = StyleSheet.create({
         marginVertical: moderateScale(12),
         alignItems: 'center',
     },
+    prefix: {
+        fontSize: EFontSize.LG,
+        fontFamily: EFonts.MEDIUM,
+        color: EColors.DARK_GREY
+    }
 });
