@@ -1,7 +1,6 @@
 export enum EStackScreens {
     SPLASH = 'Splash',
     BOTTOM_NAVIGATOR = 'BottomNavigator',
-    FAVOURITES = 'Favourites',
     TRENDING_COINS_NFTS = 'TrendingCoinsNfts',
     SEARCH = 'Search',
     CURRENCY_CONVERTER = 'CurrencyConverter',
