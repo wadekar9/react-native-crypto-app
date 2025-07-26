@@ -3,3 +3,4 @@ export type { IGlobalMarketApiResponse, IGlobalMarketData } from './global-marke
 export type { IMarketCoin } from './coins-module-api.types';
 export type { IExchange } from './exchanges-api.types';
 export type { ISimpleCoinPriceApiResponse } from './coins-price-api.type';
+export type { ISearch, ISearchCoin } from './search-api.type';

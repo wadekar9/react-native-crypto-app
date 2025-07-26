@@ -1,4 +1,4 @@
-import { IExchange, ISimpleCoinPriceApiResponse, ITrendingApiResponse } from '$types/api-types';
+import { IExchange, ISearch, ISimpleCoinPriceApiResponse, ITrendingApiResponse } from '$types/api-types';
 import { IMarketCoin } from '$types/api-types/coins-module-api.types';
 import { IGlobalMarketApiResponse } from '$types/api-types/global-market-api.type';
 import { axiosInstance } from './axios-instance';
@@ -55,7 +55,7 @@ const apiService = {
     fetchCoinsListApi: (params: CoinsListDto) => makeRequest<unknown>(API_ENDPOINTS.COINS_LIST, params),
 
     // Search coins and other entities
-    searchQueriesApi: (query: string) => makeRequest<unknown>(`${API_ENDPOINTS.SEARCH}?query=${query}`),
+    searchQueriesApi: (query: string) => makeRequest<ISearch>(`${API_ENDPOINTS.SEARCH}?query=${query}`),
 
     // Ping the API
     pingTheApiApi: () => makeRequest<unknown>(API_ENDPOINTS.PING),
